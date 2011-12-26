@@ -25,3 +25,4 @@
    Compatible library must be generated:  hidapi\hidapi_native\windows\readme.txt
 6. See application\extensions\unpacked\readme.txt for debug info.
 7. HIDAPI info http://www.signal11.us/oss/hidapi/
+
