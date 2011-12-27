@@ -82,7 +82,15 @@
 
 
     <target name="build.all" description="Build all modules and create application installer">
-        <fail unless="sdk.dir"  message="AIR_SDK_HOME is not set (.bash_profile + environment.plist)"/>
+        <available file="${env.AIR_SDK_HOME}" property="sdk.set"/>
+
+        <fail message="AIR_SDK_HOME is not set or does not exist (${env.AIR_SDK_HOME})">
+            <condition>
+                <not>
+                    <isset property="sdk.set"/>
+                </not>
+            </condition>
+        </fail>
 
         <info title="Build all" description="Build all modules and create application installer"/>
         <echo message="AIR_SDK_HOME: ${sdk.dir}"/>
