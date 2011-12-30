@@ -103,7 +103,6 @@
         <antcall target="create.extension.package"/>
         <antcall target="build.application"/>
         <antcall target="create.application.package"/>
-        <antcall target="hidapi.generate.doc"/>
         <info title="Build successfull" description="Application installer: ${project.dir}/${installer.name}"/>
     </target>
 
@@ -116,6 +115,7 @@
         <copy file="${app.lib.dir}/${hidapi}.swc" todir="${release.dir}"/>
         <copy file="${app.ext.dir}/${hidapi}.ane" todir="${release.dir}"/>
         <copy file="${project.dir}/${installer.name}" todir="${release.dir}"/>
+        <antcall target="hidapi.generate.doc"/>
         <zip zipfile="${release.dir}/hidapi.zip">
             <fileset dir="${hidapi.doc.dir}">
                 <include name="**" />
