@@ -5,23 +5,11 @@ Building Windows extension with with MinGW
 3. Create def-file using reimp from utils: reimp -d FlashRuntimeExtensions.lib
 4. Rename generated def file("Adobe Air" or similar) to FlashRuntimeExtensions.def
 5. Create .a library from FlashRuntimeExtensions.lib(see Air SDK lib folder): dlltool -d FlashRuntimeExtensions.def -l FlashRuntimeExtensions.dll.a
-6. Fix FlashRuntimeExtensions.h
-#ifdef __MINGW32__
-    #include <stdint.h>
-#else
-    #ifdef WIN32
-          typedef unsigned __int32	uint32_t;
-          typedef unsigned __int8	uint8_t;
-          typedef          __int32	int32_t;
-    #else
-          #include <stdint.h>
-    #endif
-#endif
-7. Now you can compile dll:
+6. Now you can compile dll:
     g++ -Wall -shared Extension.cpp -o Extension.dll -L. -lFlashRuntimeExtensions -static-libgcc -static-libstdc++
-8. Download http://sourceforge.net/projects/unxutils extract and add to PATH
-9. Now you can use: mingw32-make clean && mingw32-make all
-10. Read DevelopingActionScriptExtensionsForAdobeAIR.pdf
+7. Download http://sourceforge.net/projects/unxutils extract and add to PATH
+8. Now you can use: mingw32-make clean && mingw32-make all
+9. Read DevelopingActionScriptExtensionsForAdobeAIR.pdf
 
 Example:
 
