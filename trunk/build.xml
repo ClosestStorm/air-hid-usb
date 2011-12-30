@@ -4,7 +4,7 @@
   ~
   ~ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
   -->
-<project default="build.all" basedir="." name="USB Application">
+<project default="build.all" basedir="." name="Air native extension">
 
     <property name="project.dir" location="."/>
 
@@ -105,7 +105,7 @@
         <antcall target="create.application.package"/>
     </target>
 
-    <target name="Distribute" description="Collect all build artifacts">
+    <target name="distribute" description="Collect all build artifacts">
         <info title="Distribute" description="Collect all build artifacts"/>
 
         <delete dir="${release.dir}" failonerror="true"/>
