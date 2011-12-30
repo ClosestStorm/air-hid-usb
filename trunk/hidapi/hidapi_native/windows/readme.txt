@@ -1,7 +1,7 @@
 Building Windows extension with with MinGW
 
 1. Setup MinGW: http://www.mingw.org/wiki/InstallationHOWTOforMinGW
-2. Download MinGW Utils: http://sourceforge.net/projects/mingw/files/MinGW/Extension/mingw-utils/
+2. Download MinGW Utils (mingw-util-0.3): http://sourceforge.net/projects/mingw/files/MinGW/Extension/mingw-utils/
 3. Create def-file using reimp from utils: reimp -d FlashRuntimeExtensions.lib
 4. Rename generated def file("Adobe Air" or similar) to FlashRuntimeExtensions.def
 5. Create .a library from FlashRuntimeExtensions.lib(see Air SDK lib folder): dlltool -d FlashRuntimeExtensions.def -l FlashRuntimeExtensions.dll.a
