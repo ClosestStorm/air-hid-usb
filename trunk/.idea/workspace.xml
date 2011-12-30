@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ff23b285-43fd-4c58-a411-9c23c5440c5e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Dev\google.air-hid-usb\hidapi\hidapi_native\windows\FlashRuntimeExtensions.def" afterPath="" />
-      <change type="DELETED" beforePath="C:\Dev\google.air-hid-usb\hidapi\hidapi_native\windows\FlashRuntimeExtensions.h" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/windows/FlashRuntimeExtensions.dll.a" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/windows/FlashRuntimeExtensions.dll.a" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/air-manifest.xml" afterPath="$PROJECT_DIR$/application/air-manifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/makefile.win" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/makefile.win" />
     </list>
     <ignored path="air-hid-usb.iws" />
@@ -87,7 +82,16 @@
       <file leaf-file-name="readme.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/windows/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="94" selection-start="450" selection-end="519" vertical-scroll-proportion="0.0">
+            <state line="11" column="1" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="12" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,7 +100,7 @@
       <file leaf-file-name="air.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="64" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0">
+            <state line="16" column="12" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,7 +127,7 @@
       <file leaf-file-name="makefile.win" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/makefile.win">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="32" selection-start="492" selection-end="492" vertical-scroll-proportion="0.44041452">
+            <state line="28" column="35" selection-start="891" selection-end="891" vertical-scroll-proportion="0.8880597">
               <folding />
             </state>
           </provider>
@@ -150,12 +154,13 @@
         <option value="$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDManager.as" />
         <option value="$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDFactory.as" />
         <option value="$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDDevice.as" />
-        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/hidapi/hidapi_native/windows/FlashRuntimeExtensions.h" />
         <option value="$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h" />
         <option value="$PROJECT_DIR$/hidapi/hidapi_native/windows/FlashRuntimeExtensions.cmd" />
         <option value="$PROJECT_DIR$/application/air-manifest.xml" />
+        <option value="$PROJECT_DIR$/hidapi/hidapi_native/windows/readme.txt" />
+        <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/hidapi/hidapi_native/makefile.win" />
       </list>
     </option>
@@ -164,10 +169,8 @@
     <option name="jreName" value="1.5" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1230" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -269,50 +272,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="windows" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="air-hid-usb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="google.air-hid-usb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi_native" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="air-hid-usb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="google.air-hid-usb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi_native" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -328,10 +287,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hidapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi_ane" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,6 +349,118 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+          <PATH vcs="svn" revision="9">C:\Dev\google.air-hid-usb\readme.txt</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -549,23 +616,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="0" width="1230" height="1040" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15384616" sideWeight="0.6703663" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18267581" sideWeight="0.67118645" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20673077" sideWeight="0.6703663" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22041166" sideWeight="0.67118645" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -671,19 +738,9 @@
         <state line="10" column="94" selection-start="475" selection-end="490" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="667" selection-end="667" vertical-scroll-proportion="0.38169256" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="163" column="52" selection-start="6496" selection-end="6506" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="64" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/IHIDManager.as">
@@ -696,13 +753,6 @@
         <state line="207" column="0" selection-start="5898" selection-end="5898" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/windows/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="94" selection-start="450" selection-end="519" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/air-manifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="26" selection-start="1427" selection-end="1427" vertical-scroll-proportion="0.0">
@@ -710,9 +760,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/windows/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="1" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="12" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="12" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/makefile.win">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="492" selection-end="492" vertical-scroll-proportion="0.44041452">
+        <state line="28" column="35" selection-start="891" selection-end="891" vertical-scroll-proportion="0.8880597">
           <folding />
         </state>
       </provider>
