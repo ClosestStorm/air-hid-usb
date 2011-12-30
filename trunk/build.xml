@@ -191,8 +191,6 @@
 
         <antcall target="build.native"/>
 
-        <file exists=""/>
-
         <!--Library-->
         <copy file="${app.lib.dir}/${hidapi}.swc" todir="${temp}" overwrite="true" failonerror="true"/>
         <unzip src="${app.lib.dir}/${hidapi}.swc" dest="${temp}" overwrite="true" failonemptyarchive="true">
@@ -217,7 +215,6 @@
 
 
     <target name="hidapi.generate.doc" description="Create extension documentaion">
-        <info title="Generate AsDoc" description="Create extension documentaion"/>
         <delete file="${hidapi.doc.dir}"/>
         <exec executable="${aasdoc}" failonerror="true">
             <arg line="-output ${hidapi.doc.dir}"/>
@@ -242,7 +239,6 @@
 
 
     <target name="unzip.extesion.content" description="Exctract extension files for debug (-extDir)">
-        <info title="Unzip extension" description="Exctract extension files for debug (-extDir)"/>
         <delete dir="${app.ext.unpacked.dir}/${hidapi}.ane" failonerror="true"/>
         <unzip src="${app.ext.dir}/${hidapi}.ane" dest="${app.ext.unpacked.dir}/${hidapi}.ane" overwrite="true"/>
     </target>
