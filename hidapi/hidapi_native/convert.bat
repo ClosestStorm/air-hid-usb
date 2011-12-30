@@ -1,4 +1,8 @@
 @echo off
+rem ~ Copyright: (c) 2011. Turtsevitch Alexander
+rem ~
+rem ~ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
+
 rem creates mingw compatible library from FlashRuntimeExtensions.lib
 
 set air_def_name=Adobe AIR.def
