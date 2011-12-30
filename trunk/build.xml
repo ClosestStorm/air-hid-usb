@@ -57,6 +57,7 @@
         <isset property="isWindows"/>
     </condition>
 
+    <property name="release.dir" location="${project.dir}/release"/>
     
     <property name="app.dir" location="${project.dir}/application"/>
 
@@ -102,7 +103,24 @@
         <antcall target="create.extension.package"/>
         <antcall target="build.application"/>
         <antcall target="create.application.package"/>
+        <antcall target="hidapi.generate.doc"/>
         <info title="Build successfull" description="Application installer: ${project.dir}/${installer.name}"/>
+    </target>
+
+    <target name="distribute" description="Collect all build artifacts">
+        <info title="Distribute" description="Collect all build artifacts"/>
+
+        <delete dir="${release.dir}" failonerror="true"/>
+        <mkdir dir="${release.dir}"/>
+
+        <copy file="${app.lib.dir}/${hidapi}.swc" todir="${release.dir}"/>
+        <copy file="${app.ext.dir}/${hidapi}.ane" todir="${release.dir}"/>
+        <copy file="${project.dir}/${installer.name}" todir="${release.dir}"/>
+        <zip zipfile="${release.dir}/hidapi.zip">
+            <fileset dir="${hidapi.doc.dir}">
+                <include name="**" />
+            </fileset>
+        </zip>
     </target>
 
 
@@ -219,6 +237,7 @@
         <delete file="${app.ext.dir}/${hidapi}.ane"/>
         <delete file="${hidapi.dir}/library.swf"/>
         <delete file="${project.dir}/${application}Installer.exe"/>
+        <delete file="${release.dir}"/>
     </target>
 
 
