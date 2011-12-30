@@ -103,10 +103,9 @@
         <antcall target="create.extension.package"/>
         <antcall target="build.application"/>
         <antcall target="create.application.package"/>
-        <info title="Build successfull" description="Application installer: ${project.dir}/${installer.name}"/>
     </target>
 
-    <target name="distribute" description="Collect all build artifacts">
+    <target name="Distribute" description="Collect all build artifacts">
         <info title="Distribute" description="Collect all build artifacts"/>
 
         <delete dir="${release.dir}" failonerror="true"/>
@@ -121,6 +120,7 @@
                 <include name="**" />
             </fileset>
         </zip>
+        <info title="Distribute success" description="Release: ${release.dir}/${installer.name}"/>
     </target>
 
 
