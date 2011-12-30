@@ -9,11 +9,19 @@ commonFiles=./hidapi
 windows=./windows
 src=$(windows)/hid.cpp $(commonFiles)/air.cpp
 lib=-lhid -lsetupapi -lFlashRuntimeExtensions -L$(windows) -I$(commonFiles)
-inc=-I$(windows)
+inc=-I$(windows) -I$(AIR_SDK_HOME)/include
 flags=-Wall -shared -static-libgcc -static-libstdc++
 
-hidapi.dll: $(src) $(commonFiles)/air.h $(windows)/FlashRuntimeExtensions.h $(commonFiles)/hidapi.h
+air.def.name=Adobe AIR.def
+air.lib=$(AIR_SDK_HOME)\lib\win\FlashRuntimeExtensions.lib
+air.a=$(CURDIR)\windows\FlashRuntimeExtensions.dll.a
+
+hidapi.dll: $(src) $(commonFiles)/air.h $(commonFiles)/hidapi.h
+	reimp -d "$(air.lib)"
+	dlltool -d "$(air.def.name)" -l "$(air.a)"
 	g++ $(flags) $(src) $(lib) $(inc) -o ./bin/$(target)
 
 clean:
+	del "$(air.a)"
+	del "$(CURDIR)\$(air.def.name)"
 	del "$(CURDIR)\windows\$(target)"
