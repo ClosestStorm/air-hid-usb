@@ -6,9 +6,6 @@
 package com.hidapi
 {
     import flash.events.EventDispatcher;
-    import flash.utils.Dictionary;
-
-    import mx.collections.ArrayCollection;
     import mx.logging.ILogger;
     import mx.logging.Log;
 

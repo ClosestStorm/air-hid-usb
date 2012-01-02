@@ -5,7 +5,6 @@
  */
 package com.hidapi
 {
-    import flash.events.EventDispatcher;
     import flash.utils.ByteArray;
 
     import mx.logging.ILogger;
