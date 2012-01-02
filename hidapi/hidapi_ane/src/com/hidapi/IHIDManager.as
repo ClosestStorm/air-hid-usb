@@ -13,7 +13,7 @@ package com.hidapi
     public interface IHIDManager
     {
         /**
-         * Open a HID device using a Vendor ID (VID), Product ID (PID) and optionally a serial number.
+         * Get a HID device instance using a Vendor ID (VID), Product ID (PID) and optionally a serial number.
          * @param productId The Vendor ID (VID) of the types of device to open
          * @param vendorId  The Product ID (PID) of the types of device to open
          * @param serial_number The Serial Number of the device to open (Optionally NULL)
@@ -23,7 +23,7 @@ package com.hidapi
         function getDevice(productId:uint, vendorId:uint, serial_number:String = null):IHIDDevice;
 
         /**
-         * Open a HID device using a path. This allows to select to open one of few devices with the same pid/vid.
+         * Get a HID device instance using a path. This allows to select to open one of few devices with the same pid/vid.
          * @param path     The path name of the device to open
          * @return device instance
          * @see com.hidapi.IHIDDevice
@@ -40,7 +40,7 @@ package com.hidapi
         function getDeviceList(productId:uint = 0x0, vendorId:uint = 0x0):Array;
 
         /**
-         * This function returns a string containing the last error
+         * Get the last error (native)
          * which occurred in getDeviceList or "" (empty string) if none errors has occurred.
          * @return error message or "" (empty string) if none errors has occurred
          */
