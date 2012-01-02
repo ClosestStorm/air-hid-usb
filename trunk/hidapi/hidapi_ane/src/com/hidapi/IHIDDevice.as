@@ -21,13 +21,13 @@ package com.hidapi
         function open():Boolean;
 
         /**
-         * Returns true if device is opened, false in other case
+         * Returns true if device is opened (open called), false in other case
          * @return true if device is opened, false in other case
          */
         function get isOpened():Boolean;
 
         /**
-         * Return device info or null if device has not been opened.
+         * Return device info or null if device has not been opened (or open call failed).
          * @see com.hidapi.IHIDDeviceInfo
          */
         function get deviceDescriptor():IHIDDeviceInfo;
