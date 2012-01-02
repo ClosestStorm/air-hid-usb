@@ -7,7 +7,7 @@ package com.hidapi
 {
     /**
      * HID device descriptor
-     * its public because instances are created in dll.
+     * its public because instances are created in native code.
      * @private
      */
     public class HidDeviceInfo implements IHIDDeviceInfo
