@@ -14,7 +14,7 @@ package com.hidapi
         private static var _instance:HIDManager;
 
         /**
-         * Creates IHIDManager instance used to operate with HID devices.
+         * Get IHIDManager instance used to operate HID devices.
          * @return instance of IHIDManager
          */
         public static function getHIDManager():IHIDManager
