@@ -2,7 +2,7 @@
 <extension xmlns="http://ns.adobe.com/air/extension/3.1">
     <id>com.hidapi.Hid</id>
     <name>hidapi</name>
-    <copyright>Copyright: (c) 2011. Turtsevitch Alexander. Licensed under the MIT license.</copyright>
+    <copyright>Copyright: (c) 2011. Turtsevich Alexander. Licensed under the MIT license.</copyright>
     <description>HIDAPI wrapper for Adobe AIR. See also http://www.signal11.us/oss/hidapi/</description>
     <versionNumber>1.0.0</versionNumber>
     <platforms>

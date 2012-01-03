@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright: (c) 2011. Turtsevitch Alexander
+  ~ Copyright: (c) 2011. Turtsevich Alexander
   ~
   ~ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
   -->
@@ -25,7 +25,7 @@
 	<!-- Description, displayed in the AIR application installer. Optional. -->
 	<description>Demo application</description>
 	<!-- Copyright information. Optional -->
-	<copyright>Copyright: (c) 2011. Turtsevitch Alexander (nimrod97@gmail.com)</copyright>
+	<copyright>Copyright: (c) 2011. Turtsevich Alexander (nimrod97@gmail.com)</copyright>
 	<versionNumber>0.0.516</versionNumber>
 	<!-- Settings for the application's initial window. Required. -->
 	<initialWindow>

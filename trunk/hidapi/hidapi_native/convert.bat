@@ -1,5 +1,5 @@
 @echo off
-rem ~ Copyright: (c) 2011. Turtsevitch Alexander
+rem ~ Copyright: (c) 2011. Turtsevich Alexander
 rem ~
 rem ~ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
 
