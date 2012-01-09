@@ -1,7 +1,7 @@
 /*
- ~ Copyright: (c) 2011. Turtsevich Alexander
- ~
- ~ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
+ * Copyright: (c) 2012. Turtsevich Alexander
+ *
+ * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
  */
 package com.hidapi
 {
