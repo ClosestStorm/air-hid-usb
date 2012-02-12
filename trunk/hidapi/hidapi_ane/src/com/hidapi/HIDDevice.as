@@ -108,7 +108,7 @@ package com.hidapi
         }
 
         /*
-         * the same as HIDAPI has.
+         * the same filter as HIDAPI has.
          */
         private function deviceFilter(deviceInfo:IHIDDeviceInfo, index:int, array:Array):Boolean
         {
@@ -126,38 +126,38 @@ package com.hidapi
         /**
          * @inheritDoc
          */
-        public function sendFeatureReport(data:ByteArray):Boolean
+        public function sendFeatureReport(data:ByteArray):int
         {
-            return isOpened ? hid.hid_send_feature_report(data) : false;
+            return isOpened ? hid.hid_send_feature_report(data)  : -1;
         }
 
         /**
          * @inheritDoc
          */
-        public function getFeatureReport(data:ByteArray):Boolean
+        public function getFeatureReport(data:ByteArray):int
         {
-            return isOpened ? hid.hid_get_feature_report(data) : false;
+            return isOpened ? hid.hid_get_feature_report(data) : -1;
         }
 
-        public function write(data:ByteArray):Boolean
+        public function write(data:ByteArray):int
         {
-            return isOpened ? hid.hid_write(data) : false;
-        }
-
-        /**
-         * @inheritDoc
-         */
-        public function read(data:ByteArray):Boolean
-        {
-            return isOpened ? hid.hid_read(data) : false;
+            return isOpened ? hid.hid_write(data) : -1;
         }
 
         /**
          * @inheritDoc
          */
-        public function readTimeout(data:ByteArray, millis:int):Boolean
+        public function read(data:ByteArray):int
         {
-            return isOpened ? hid.hid_read_timeout(data, millis) : false;
+            return isOpened ? hid.hid_read(data) : -1;
+        }
+
+        /**
+         * @inheritDoc
+         */
+        public function readTimeout(data:ByteArray, millis:int):int
+        {
+            return isOpened ? hid.hid_read_timeout(data, millis) : -1;
         }
 
         /**

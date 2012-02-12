@@ -85,7 +85,6 @@
         {
             var manager:IHIDManager = HIDFactory.getHIDManager();
             var deviceList:Array = manager.getDeviceList();
-
             deviceGrid.dataProvider = new ArrayCollection(deviceList);
         }
 

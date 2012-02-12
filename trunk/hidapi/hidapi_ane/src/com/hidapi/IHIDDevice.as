@@ -59,39 +59,39 @@ package com.hidapi
         /**
          * Send a Feature report to the device.
          * @param data
-         * @return operation status
+         * @return bytes processed or -1 on error
          */
-        function sendFeatureReport(data:ByteArray):Boolean;
+        function sendFeatureReport(data:ByteArray):int;
 
         /**
          * Get a feature report from a HID device.
          * @param data
-         * @return operation status
+         * @return bytes processed or -1 on error
          */
-        function getFeatureReport(data:ByteArray):Boolean;
+        function getFeatureReport(data:ByteArray):int;
 
 
         /**
          * Write an Output report to a HID device
          * @param data
-         * @return operation status
+         * @return bytes processed or -1 on error
          */
-        function write(data:ByteArray):Boolean;
+        function write(data:ByteArray):int;
 
         /**
          * Get a feature report from a HID device.
          * @param data
-         * @return operation status
+         * @return bytes processed or -1 on error
          */
-        function read(data:ByteArray):Boolean;
+        function read(data:ByteArray):int;
 
         /**
          * Read an Input report from a HID device with timeout.
          * @param data
          * @param millis timeout in milliseconds
-         * @return operation status
+         * @return bytes processed or -1 on error
          */
-        function readTimeout(data:ByteArray, millis:int):Boolean;
+        function readTimeout(data:ByteArray, millis:int):int;
 
         /**
          * Get The Manufacturer String from a HID device.
