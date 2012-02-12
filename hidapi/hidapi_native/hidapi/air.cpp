@@ -20,9 +20,11 @@
 #include "air.h"
 
 #ifdef LOG_ENABLED
-    #define DEBUG_PRINT(arg) print(arg)
+    #define DEBUG_PRINT(msg) print(msg)
+    #define DEBUG_RESULT(method, result) printResult(method, result)
 #else
-    #define DEBUG_PRINT(arg)
+    #define DEBUG_PRINT(msg)
+    #define DEBUG_RESULT(method, result)
 #endif
 
 #ifdef __cplusplus
@@ -49,6 +51,66 @@ extern "C" {
             }
         }
 
+        void printResult(const char * method, FREResult result)
+        {
+            char msg [1024];
+
+            if(FRE_OK == result)
+            {
+                sprintf(msg, "SUCCESS FRE_OK: %s", method);
+            }
+            else if(FRE_NO_SUCH_NAME == result)
+            {
+                sprintf(msg, "ERROR FRE_NO_SUCH_NAME: %s", method);
+            }
+            else if(FRE_INVALID_OBJECT == result)
+            {
+                sprintf(msg, "ERROR FRE_INVALID_OBJECT: %s", method);
+            }
+            else if(FRE_TYPE_MISMATCH == result)
+            {
+                sprintf(msg, "ERROR FRE_TYPE_MISMATCH: %s", method);
+            }
+            else if(FRE_ACTIONSCRIPT_ERROR == result)
+            {
+                sprintf(msg, "ERROR FRE_ACTIONSCRIPT_ERROR: %s", method);
+            }
+            else if(FRE_INVALID_ARGUMENT == result)
+            {
+                sprintf(msg, "ERROR FRE_INVALID_ARGUMENT: %s", method);
+            }
+            else if(FRE_INVALID_ARGUMENT == result)
+            {
+                sprintf(msg, "ERROR FRE_INVALID_ARGUMENT: %s", method);
+            }
+            else if(FRE_READ_ONLY == result)
+            {
+                sprintf(msg, "ERROR FRE_READ_ONLY: %s", method);
+            }
+            else if(FRE_WRONG_THREAD == result)
+            {
+                sprintf(msg, "ERROR FRE_WRONG_THREAD: %s", method);
+            }
+            else if(FRE_ILLEGAL_STATE == result)
+            {
+                sprintf(msg, "ERROR FRE_ILLEGAL_STATE: %s", method);
+            }
+            else if(FRE_INSUFFICIENT_MEMORY == result)
+            {
+                sprintf(msg, "ERROR FRE_INSUFFICIENT_MEMORY: %s", method);
+            }
+
+            print(msg);
+        }
+
+        /*
+        * Private. Check strings before convertion.
+        */
+        bool is_not_empty_strw(const wchar_t * s)
+        {
+             return (s != NULL && wcslen(s) > 1 && wcscmp(s, L"") > 0);
+        }
+
         /*
         * Private. Returns device handle stored in air extension context.
         */
@@ -58,16 +120,59 @@ extern "C" {
 
             FREResult result = FREGetContextNativeData(ctx, (void **) &device);
 
-            if(FRE_OK == result)
+            if(FRE_OK != result)
             {
-                DEBUG_PRINT("get_device_handle success");
+                device = NULL;
+            }
+            DEBUG_RESULT("get_device_handle", result);
+            return device;
+        }
+
+        FREObject get_null_string_as_empty(const char * resultString)
+        {
+            FREObject stringObject;
+            FREResult result;
+
+            if(resultString != NULL && strlen(resultString) > 1)
+            {
+               result = FRENewObjectFromUTF8((uint32_t)strlen(resultString), (const uint8_t*)resultString, &stringObject);
             }
             else
             {
-                DEBUG_PRINT("get_device_handle error");
-                device = NULL;
+               result = FRENewObjectFromUTF8((uint32_t)strlen(""), (const uint8_t*)"", &stringObject);
             }
-            return device;
+            DEBUG_RESULT("FRENewObjectFromUTF8: get_null_string_as_empty", result);
+            return stringObject;
+        }
+
+        void put_object_property_int32(FREObject object, const uint8_t * propertyName, uint32_t value)
+        {
+            char msg [1024];
+            FREResult result;
+            FREObject propertyValue;
+
+            result = FRENewObjectFromUint32(value, &propertyValue);
+            sprintf(msg, "FRENewObjectFromUint32: %s", propertyName);
+            DEBUG_RESULT(msg, result);
+
+            result = FRESetObjectProperty(object, propertyName, propertyValue, NULL);
+            sprintf(msg, "FRESetObjectProperty: %s", propertyName);
+            DEBUG_RESULT(msg, result);
+        }
+
+        void put_object_property_strw(FREObject object, const uint8_t * propertyName, const wchar_t * value)
+        {
+            if(is_not_empty_strw(value))
+            {
+                char msg [1024];
+                char * string = (char *) malloc(8192);
+                wcstombs(string,  value, 8192);
+                FREObject propertyValue = get_null_string_as_empty(string);
+                FREResult result = FRESetObjectProperty(object, propertyName, propertyValue, NULL);
+                sprintf(msg, "FRESetObjectProperty: %s", propertyName);
+                DEBUG_RESULT(msg, result);
+                free(string);
+            }
         }
 
         /*
@@ -76,22 +181,20 @@ extern "C" {
         FREObject get_result_as_boolean(bool value)
         {
             FREObject resultObject;
-            FRENewObjectFromBool(value, &resultObject);
+            FREResult result = FRENewObjectFromBool(value, &resultObject);
+            DEBUG_RESULT("FRENewObjectFromBool: get_result_as_boolean", result);
             return resultObject;
         }
 
-        FREObject get_null_string_as_empty(const char * resultString)
+        /*
+        * Private. Returns as3 object (int) for int.
+        */
+        FREObject get_result_as_int32(int value)
         {
-            FREObject stringObject;
-            if(strlen(resultString) > 1)
-            {
-               FRENewObjectFromUTF8((uint32_t)strlen(resultString), (const uint8_t*)resultString, &stringObject);
-            }
-            else
-            {
-               FRENewObjectFromUTF8((uint32_t)strlen(""), (const uint8_t*)"", &stringObject);
-            }
-            return stringObject;
+            FREObject resultObject;
+            FREResult result = FRENewObjectFromInt32(value, &resultObject);
+            DEBUG_RESULT("FRENewObjectFromInt32: get_result_as_int32", result);
+            return resultObject;
         }
 
         /*
@@ -99,124 +202,113 @@ extern "C" {
         */
         FREObject hid_enumerateA(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
         {
+            DEBUG_PRINT("hid_enumerateA");
+
+            FREResult result;
+
             //input array
             FREObject resultArray = argv[0];
 
             uint32_t prodId;
-            FREGetObjectAsUint32(argv[1], &prodId);
+            result = FREGetObjectAsUint32(argv[1], &prodId);
+            DEBUG_RESULT("FREGetObjectAsUint32: prodId", result);
 
             uint32_t vendId;
-            FREGetObjectAsUint32(argv[2], &vendId);
+            result = FREGetObjectAsUint32(argv[2], &vendId);
+            DEBUG_RESULT("FREGetObjectAsUint32: vendId", result);
 
             char msg [1024];
             sprintf(msg, "hid_enumerateA(vendorId=%04hx, productId=%04hx)", vendId, prodId);
             DEBUG_PRINT(msg);
 
-            uint32_t deviceCounter = 0;
-
-            struct hid_device_info *devs, *cur_dev;
+            struct hid_device_info *devs;
             devs = hid_enumerate(vendId, prodId);
-            cur_dev = devs;
-            while (cur_dev)
+
+            if(devs != NULL)
             {
-                DEBUG_PRINT("Device:");
-                sprintf(msg, "  vendorId=%04hx productId=%04hx", cur_dev->vendor_id, cur_dev->product_id);
-                DEBUG_PRINT(msg);
-                sprintf(msg, "  path: %s", cur_dev->path);
-                DEBUG_PRINT(msg);
-                sprintf(msg, "  serial_number: %ls",cur_dev->serial_number);
-                DEBUG_PRINT(msg);
-                sprintf(msg, "  Manufacturer: %ls", cur_dev->manufacturer_string);
-                DEBUG_PRINT(msg);
-                sprintf(msg, "  Product:      %ls", cur_dev->product_string);
-                DEBUG_PRINT(msg);
-                sprintf(msg, "  Release:      %hx", cur_dev->release_number);
-                DEBUG_PRINT(msg);
-                sprintf(msg, "  Interface:    %d",  cur_dev->interface_number);
-                DEBUG_PRINT(msg);
+                uint32_t deviceCounter = 0;
+                struct hid_device_info *cur_dev;
 
-                //create device Object
-                FREObject device;
-                uint8_t *className = (uint8_t*)"com.hidapi.HidDeviceInfo";
+                cur_dev = devs;
 
-                //Array of zero length is NOT standard C, but a GCC extension.
-                FRENewObject(className, 0, new FREObject [0], &device, NULL);
-
-                //set path property of device object
-                FREObject pathPropertyValue;
-                FRENewObjectFromUTF8((uint32_t)strlen(cur_dev->path), (const uint8_t*)cur_dev->path, &pathPropertyValue);
-                FRESetObjectProperty(device, (const uint8_t*) "path", pathPropertyValue, NULL);
-
-                //set manufacturer_string property of device object
-                //...wcstombs validates its parameters == fail...
-                if(cur_dev->manufacturer_string != NULL)
+                while (cur_dev)
                 {
-                    char * manufacturer_string = (char *) malloc(8192);
-                    wcstombs(manufacturer_string,  cur_dev->manufacturer_string, 8192);
-                    FREObject manufacturerPropertyValue = get_null_string_as_empty(manufacturer_string);
-                    FRESetObjectProperty(device, (const uint8_t*) "manufacturer_string", manufacturerPropertyValue, NULL);
-                    free(manufacturer_string);
+                    DEBUG_PRINT("Device:");
+                    sprintf(msg, "  vendorId=%04hx productId=%04hx", cur_dev->vendor_id, cur_dev->product_id);
+                    DEBUG_PRINT(msg);
+                    sprintf(msg, "  path: %s", cur_dev->path);
+                    DEBUG_PRINT(msg);
+                    sprintf(msg, "  serial_number: %ls",cur_dev->serial_number);
+                    DEBUG_PRINT(msg);
+                    sprintf(msg, "  Manufacturer: %ls", cur_dev->manufacturer_string);
+                    DEBUG_PRINT(msg);
+                    sprintf(msg, "  Product:      %ls", cur_dev->product_string);
+                    DEBUG_PRINT(msg);
+                    sprintf(msg, "  Release:      %hx", cur_dev->release_number);
+                    DEBUG_PRINT(msg);
+                    sprintf(msg, "  Interface:    %d",  cur_dev->interface_number);
+                    DEBUG_PRINT(msg);
+
+                    //create device Object
+                    FREObject device;
+                    uint8_t *className = (uint8_t*)"com.hidapi.HidDeviceInfo";
+
+                    //Array of zero length is NOT standard C, but a GCC extension.
+                    result = FRENewObject(className, 0, new FREObject [0], &device, NULL);
+
+                    DEBUG_RESULT("FRENewObject: com.hidapi.HidDeviceInfo", result);
+
+                    //set path property of device object
+                    FREObject pathPropertyValue;
+
+                    result = FRENewObjectFromUTF8((uint32_t)strlen(cur_dev->path), (const uint8_t*)cur_dev->path, &pathPropertyValue);
+                    DEBUG_RESULT("FRENewObjectFromUTF8: pathPropertyValue", result);
+
+                    result = FRESetObjectProperty(device, (const uint8_t*) "path", pathPropertyValue, NULL);
+                    DEBUG_RESULT("FRESetObjectProperty: pathPropertyValue", result);
+
+                    //set manufacturer_string property of device object
+                    put_object_property_strw(device, (const uint8_t*) "manufacturer_string", cur_dev->manufacturer_string);
+
+                    //set product_string property of device object
+                    put_object_property_strw(device, (const uint8_t*) "product_string", cur_dev->product_string);
+
+                    //set serial_number property of device object
+                    put_object_property_strw(device, (const uint8_t*) "serial_number", cur_dev->serial_number);
+
+                    //set productId property of device object
+                    put_object_property_int32(device, (const uint8_t*) "productId", (uint32_t)cur_dev->product_id);
+
+                    //set vendorId property of device object
+                    put_object_property_int32(device, (const uint8_t*) "vendorId", (uint32_t)cur_dev->vendor_id);
+
+                    //set release_number property of device object
+                    put_object_property_int32(device, (const uint8_t*) "release_number", (uint32_t)cur_dev->release_number);
+
+                    //set usage_page property of device object
+                    put_object_property_int32(device, (const uint8_t*) "usage_page", (uint32_t)cur_dev->usage_page);
+
+                    //set usage property of device object
+                    put_object_property_int32(device, (const uint8_t*) "usage", (uint32_t)cur_dev->usage);
+
+                    //set interface_number property of device object
+                    put_object_property_int32(device, (const uint8_t*) "interface_number", (uint32_t)cur_dev->interface_number);
+
+                    //add device to result array
+                    result = FRESetArrayLength(resultArray, deviceCounter + 1);
+                    DEBUG_RESULT("FRESetArrayLength", result);
+
+                    result = FRESetArrayElementAt(resultArray, deviceCounter, device);
+                    DEBUG_RESULT("FRESetArrayElementAt", result);
+
+                    //increment device counter
+                    deviceCounter++;
+                    cur_dev = cur_dev->next;
                 }
-
-                //set product_string property of device object
-                if(cur_dev->product_string != NULL)
-                {
-                    char * product_string = (char *) malloc(8192);
-                    wcstombs(product_string,  cur_dev->product_string, 8192);
-                    FREObject productStringPropertyValue = get_null_string_as_empty(product_string);
-                    FRESetObjectProperty(device, (const uint8_t*) "product_string", productStringPropertyValue, NULL);
-                    free(product_string);
-                }
-
-                //set serial_number property of device object
-                if(cur_dev->serial_number != NULL)
-                {
-                    char * serial_number = (char *) malloc(8192);
-                    wcstombs(serial_number,  cur_dev->serial_number, 8192);
-                    FREObject serialNumberPropertyValue = get_null_string_as_empty(serial_number);
-                    FRESetObjectProperty(device, (const uint8_t*) "serial_number", serialNumberPropertyValue, NULL);
-                    free(serial_number);
-                }
-
-                //set productId property of device object
-                FREObject productPropertyValue;
-                FRENewObjectFromUint32((uint32_t)cur_dev->product_id, &productPropertyValue);
-                FRESetObjectProperty(device, (const uint8_t*) "productId", productPropertyValue, NULL);
-
-                //set vendorId property of device object
-                FREObject vendorPropertyValue;
-                FRENewObjectFromUint32((uint32_t)cur_dev->vendor_id, &vendorPropertyValue);
-                FRESetObjectProperty(device, (const uint8_t*) "vendorId", vendorPropertyValue, NULL);
-
-                //set release_number property of device object
-                FREObject releaseNumberPropertyValue;
-                FRENewObjectFromUint32((uint32_t)cur_dev->release_number, &releaseNumberPropertyValue);
-                FRESetObjectProperty(device, (const uint8_t*) "release_number", releaseNumberPropertyValue, NULL);
-
-                //set usage_page property of device object
-                FREObject usagePagePropertyValue;
-                FRENewObjectFromUint32((uint32_t)cur_dev->usage_page, &usagePagePropertyValue);
-                FRESetObjectProperty(device, (const uint8_t*) "usage_page", usagePagePropertyValue, NULL);
-
-                //set usage property of device object
-                FREObject usagePropertyValue;
-                FRENewObjectFromUint32((uint32_t)cur_dev->usage, &usagePropertyValue);
-                FRESetObjectProperty(device, (const uint8_t*) "usage", usagePropertyValue, NULL);
-
-                //set interface_number property of device object
-                FREObject interfaceNumberPropertyValue;
-                FRENewObjectFromInt32((int32_t)cur_dev->interface_number, &interfaceNumberPropertyValue);
-                FRESetObjectProperty(device, (const uint8_t*) "interface_number", interfaceNumberPropertyValue, NULL);
-
-                //add device to result array
-                FRESetArrayLength(resultArray, deviceCounter + 1);
-                FRESetArrayElementAt(resultArray, deviceCounter, device);
-
-                //increment device counter
-                deviceCounter++;
-                cur_dev = cur_dev->next;
+                //void
+                hid_free_enumeration(devs);
             }
-            hid_free_enumeration(devs);
+            DEBUG_PRINT("hid_enumerateA success");
             return get_result_as_boolean(true);
         }
 
@@ -227,17 +319,21 @@ extern "C" {
         {
             DEBUG_PRINT("hid_openA");
 
+            FREResult result;
+
             uint32_t prodId;
-            FREGetObjectAsUint32(argv[0], &prodId);
+            result = FREGetObjectAsUint32(argv[0], &prodId);
+            DEBUG_RESULT("FREGetObjectAsUint32: prodId", result);
 
             uint32_t vendId;
-            FREGetObjectAsUint32(argv[1], &vendId);
+            result = FREGetObjectAsUint32(argv[1], &vendId);
+            DEBUG_RESULT("FREGetObjectAsUint32: vendId", result);
 
             FREObject serialObject = argv[2];
             uint32_t length;
             const uint8_t *serialString = 0;
-            FREResult result = FREGetObjectAsUTF8(serialObject, &length, (const uint8_t**) &serialString);
-
+            result = FREGetObjectAsUTF8(serialObject, &length, (const uint8_t**) &serialString);
+            DEBUG_RESULT("FREGetObjectAsUTF8: serialString", result);
 
             if(FRE_OK == result)
             {
@@ -266,6 +362,8 @@ extern "C" {
                 {
                     DEBUG_PRINT("hid_openA success");
                     result = FRESetContextNativeData(ctx, (void*) device);
+                    DEBUG_RESULT("FRESetContextNativeData: device", result);
+
                     if(FRE_OK == result)
                     {
                         DEBUG_PRINT("hid_openA save handle success");
@@ -296,12 +394,14 @@ extern "C" {
         {
             DEBUG_PRINT("hid_open_pathA");
 
+            FREResult result;
             char msg [1024];
 
             FREObject pathObject = argv[0];
             uint32_t length;
             const uint8_t *pathString = 0;
-            FREResult result = FREGetObjectAsUTF8(pathObject, &length, (const uint8_t**) &pathString);
+            result = FREGetObjectAsUTF8(pathObject, &length, (const uint8_t**) &pathString);
+            DEBUG_RESULT("FREGetObjectAsUTF8: pathString", result);
 
             if(FRE_OK == result)
             {
@@ -313,6 +413,8 @@ extern "C" {
                 {
                     DEBUG_PRINT("hid_open_pathA success");
                     result = FRESetContextNativeData(ctx, (void*) device);
+                    DEBUG_RESULT("FRESetContextNativeData: device", result);
+
                     if(FRE_OK == result)
                     {
                         DEBUG_PRINT("hid_open_pathA save handle success");
@@ -341,6 +443,7 @@ extern "C" {
         FREObject hid_send_feature_reportA(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
         {
             DEBUG_PRINT("hid_send_feature_reportA");
+            int res = -1;
 
             hid_device * device = get_device_handle(ctx);
 
@@ -350,11 +453,10 @@ extern "C" {
                 FREObject byteArrayObject = argv[0];
                 FREByteArray byteArray;
                 FREResult result = FREAcquireByteArray(byteArrayObject, &byteArray);
+                DEBUG_RESULT("FREAcquireByteArray: byteArray", result);
                 if(FRE_OK == result)
                 {
-                    DEBUG_PRINT("FREAcquireByteArray success");
-
-                    int res = hid_send_feature_report(device, (const unsigned char *)byteArray.bytes, (size_t)byteArray.length);
+                    res = hid_send_feature_report(device, (const unsigned char *)byteArray.bytes, (size_t)byteArray.length);
                     if(res >= 0)
                     {
                         DEBUG_PRINT("hid_send_feature_report success");
@@ -365,26 +467,14 @@ extern "C" {
                     }
 
                     result = FREReleaseByteArray(byteArrayObject);
-                    if(FRE_OK == result)
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray success");
-                        return get_result_as_boolean(true);
-                    }
-                    else
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray error");
-                    }
-                }
-                else
-                {
-                    DEBUG_PRINT("FREAcquireByteArray error");
+                    DEBUG_RESULT("FREReleaseByteArray: byteArrayObject", result);
                 }
             }
             else
             {
                DEBUG_PRINT("hid_send_feature_reportA: no device");
             }
-            return get_result_as_boolean(false);
+            return get_result_as_int32(res);
         }
 
         /*
@@ -393,6 +483,7 @@ extern "C" {
         FREObject hid_get_feature_reportA(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
         {
             DEBUG_PRINT("hid_get_feature_reportA");
+            int res = -1;
 
             hid_device * device = get_device_handle(ctx);
 
@@ -402,11 +493,11 @@ extern "C" {
                 FREObject byteArrayObject = argv[0];
                 FREByteArray byteArray;
                 FREResult result = FREAcquireByteArray(byteArrayObject, &byteArray);
+                DEBUG_RESULT("FREAcquireByteArray: byteArray", result);
+
                 if(FRE_OK == result)
                 {
-                    DEBUG_PRINT("FREAcquireByteArray success");
-
-                    int res = hid_get_feature_report(device, (unsigned char *)byteArray.bytes, (size_t)byteArray.length);
+                    res = hid_get_feature_report(device, (unsigned char *)byteArray.bytes, (size_t)byteArray.length);
                     if(res >= 0)
                     {
                         DEBUG_PRINT("hid_get_feature_reportA success");
@@ -417,26 +508,14 @@ extern "C" {
                     }
 
                     result = FREReleaseByteArray(byteArrayObject);
-                    if(FRE_OK == result)
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray success");
-                        return get_result_as_boolean(true);
-                    }
-                    else
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray error");
-                    }
-                }
-                else
-                {
-                    DEBUG_PRINT("FREAcquireByteArray error");
+                    DEBUG_RESULT("FREReleaseByteArray: byteArrayObject", result);
                 }
             }
             else
             {
                 DEBUG_PRINT("hid_get_feature_reportA: no device");
             }
-            return get_result_as_boolean(false);
+            return get_result_as_int32(res);
         }
 
         /*
@@ -445,6 +524,7 @@ extern "C" {
         FREObject hid_writeA(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
         {
             DEBUG_PRINT("hid_writeA");
+            int res = -1;
 
             hid_device * device = get_device_handle(ctx);
 
@@ -454,12 +534,11 @@ extern "C" {
                 FREObject byteArrayObject = argv[0];
                 FREByteArray byteArray;
                 FREResult result = FREAcquireByteArray(byteArrayObject, &byteArray);
+                DEBUG_RESULT("FREAcquireByteArray: byteArray", result);
 
                 if(FRE_OK == result)
                 {
-                    DEBUG_PRINT("FREAcquireByteArray success");
-
-                    int res = hid_write(device, (const unsigned char *)byteArray.bytes, (size_t)byteArray.length);
+                    res = hid_write(device, (const unsigned char *)byteArray.bytes, (size_t)byteArray.length);
                     if(res >= 0)
                     {
                         DEBUG_PRINT("hid_writeA success");
@@ -470,26 +549,14 @@ extern "C" {
                     }
 
                     result = FREReleaseByteArray(byteArrayObject);
-                    if(FRE_OK == result)
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray success");
-                        return get_result_as_boolean(true);
-                    }
-                    else
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray error");
-                    }
-                }
-                else
-                {
-                    DEBUG_PRINT("FREAcquireByteArray error");
+                    DEBUG_RESULT("FREReleaseByteArray: byteArrayObject", result);
                 }
             }
             else
             {
                DEBUG_PRINT("hid_writeA: no device");
             }
-            return get_result_as_boolean(false);
+            return get_result_as_int32(res);
         }
 
         /*
@@ -498,6 +565,7 @@ extern "C" {
         FREObject hid_readA(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
         {
             DEBUG_PRINT("hid_readA");
+            int res = -1;
 
             hid_device * device = get_device_handle(ctx);
 
@@ -507,11 +575,11 @@ extern "C" {
                 FREObject byteArrayObject = argv[0];
                 FREByteArray byteArray;
                 FREResult result = FREAcquireByteArray(byteArrayObject, &byteArray);
+                DEBUG_RESULT("FREAcquireByteArray: byteArray", result);
+
                 if(FRE_OK == result)
                 {
-                    DEBUG_PRINT("FREAcquireByteArray success");
-
-                    int res = hid_read(device, (unsigned char *)byteArray.bytes, (size_t)byteArray.length);
+                    res = hid_read(device, (unsigned char *)byteArray.bytes, (size_t)byteArray.length);
                     if(res >= 0)
                     {
                         DEBUG_PRINT("hid_readA success");
@@ -522,26 +590,14 @@ extern "C" {
                     }
 
                     result = FREReleaseByteArray(byteArrayObject);
-                    if(FRE_OK == result)
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray success");
-                        return get_result_as_boolean(true);
-                    }
-                    else
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray error");
-                    }
-                }
-                else
-                {
-                    DEBUG_PRINT("FREAcquireByteArray error");
+                    DEBUG_RESULT("FREReleaseByteArray: byteArrayObject", result);
                 }
             }
             else
             {
                 DEBUG_PRINT("hid_readA: no device");
             }
-            return get_result_as_boolean(false);
+            return get_result_as_int32(res);
         }
 
         /*
@@ -550,6 +606,7 @@ extern "C" {
         FREObject hid_read_timeoutA(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[])
         {
             DEBUG_PRINT("hid_read_timeoutA");
+            int res = -1;
 
             hid_device * device = get_device_handle(ctx);
 
@@ -559,15 +616,15 @@ extern "C" {
                 FREObject byteArrayObject = argv[0];
                 FREByteArray byteArray;
                 FREResult result = FREAcquireByteArray(byteArrayObject, &byteArray);
+                DEBUG_RESULT("FREAcquireByteArray: byteArray", result);
 
                 int32_t millis;
-                FREGetObjectAsInt32(argv[1], &millis);
+                result = FREGetObjectAsInt32(argv[1], &millis);
+                DEBUG_RESULT("FREGetObjectAsInt32: millis", result);
 
                 if(FRE_OK == result)
                 {
-                    DEBUG_PRINT("FREAcquireByteArray success");
-
-                    int res = hid_read_timeout(device, (unsigned char *)byteArray.bytes, (size_t)byteArray.length, millis);
+                    res = hid_read_timeout(device, (unsigned char *)byteArray.bytes, (size_t)byteArray.length, millis);
                     if(res >= 0)
                     {
                         DEBUG_PRINT("hid_read_timeoutA success");
@@ -578,26 +635,14 @@ extern "C" {
                     }
 
                     result = FREReleaseByteArray(byteArrayObject);
-                    if(FRE_OK == result)
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray success");
-                        return get_result_as_boolean(true);
-                    }
-                    else
-                    {
-                        DEBUG_PRINT("FREReleaseByteArray error");
-                    }
-                }
-                else
-                {
-                    DEBUG_PRINT("FREAcquireByteArray error");
+                    DEBUG_RESULT("FREReleaseByteArray: byteArrayObject", result);
                 }
             }
             else
             {
                 DEBUG_PRINT("hid_read_timeoutA: no device");
             }
-            return get_result_as_boolean(false);
+            return get_result_as_int32(res);
         }
         /*
         * hid_close (hid_device *device)
@@ -611,7 +656,10 @@ extern "C" {
             if(device != NULL)
             {
                 hid_close(device);
+
                 FREResult result = FRESetContextNativeData(ctx, (void*) NULL);
+                DEBUG_RESULT("FRESetContextNativeData: NULL", result);
+
                 if(FRE_OK == result)
                 {
                     DEBUG_PRINT("FRESetContextNativeData reset handle success");
@@ -621,6 +669,7 @@ extern "C" {
                 {
                     DEBUG_PRINT("FRESetContextNativeData reset handle error");
                 }
+
                 DEBUG_PRINT("hid_closeA success");
             }
             else
@@ -639,31 +688,33 @@ extern "C" {
 
             hid_device * device = get_device_handle(ctx);
 
+            FREResult result;
             FREObject errorStringObject;
 
             if(device != NULL)
             {
                 const wchar_t * hidError = hid_error(device);
-                if(hidError != NULL)
+                if(is_not_empty_strw(hidError))
                 {
                     char * errorString = (char *) malloc(8192);
                     wcstombs(errorString,  hidError, 8192);
-
-                    FRENewObjectFromUTF8((uint32_t)strlen(errorString), (const uint8_t*)errorString, &errorStringObject);
+                    result = FRENewObjectFromUTF8((uint32_t)strlen(errorString), (const uint8_t*)errorString, &errorStringObject);
                     free(errorString);
                 }
                 else
                 {
                     char errorString[] = "";
-                    FRENewObjectFromUTF8((uint32_t)strlen(errorString), (const uint8_t*)errorString, &errorStringObject);
+                    result = FRENewObjectFromUTF8((uint32_t)strlen(errorString), (const uint8_t*)errorString, &errorStringObject);
                 }
+                DEBUG_RESULT("FRENewObjectFromUTF8: hidError", result);
                 DEBUG_PRINT("hid_errorA success");
             }
             else
             {
+                char errorString[] = "";
+                result = FRENewObjectFromUTF8((uint32_t)strlen(errorString), (const uint8_t*)errorString, &errorStringObject);
+                DEBUG_RESULT("FRENewObjectFromUTF8: errorString", result);
                 DEBUG_PRINT("hid_errorA: no device");
-                char errorString[] = "Device is not opened.";
-                FRENewObjectFromUTF8((uint32_t)strlen(errorString), (const uint8_t*)errorString, &errorStringObject);
             }
             return errorStringObject;
         }
@@ -863,7 +914,8 @@ extern "C" {
             if(device != NULL)
             {
                 int32_t nonblock;
-                FREGetObjectAsInt32(argv[0], &nonblock);
+                FREResult result = FREGetObjectAsInt32(argv[0], &nonblock);
+                DEBUG_RESULT("FREGetObjectAsInt32: nonblock", result);
 
                 int ret = hid_set_nonblocking(device, nonblock);
                 if(ret >= 0)

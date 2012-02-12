@@ -178,13 +178,13 @@ package com.hidapi
          * @param data
          * @return operation status
          */
-        public function hid_send_feature_report(data:ByteArray):Boolean
+        public function hid_send_feature_report(data:ByteArray):int
         {
             if(!contextCreated)
-                return false;
+                return -1;
 
-            var status:Boolean = _context.call('hid_send_feature_reportA', data) as Boolean;
-            if (!status)
+            var status:int = _context.call('hid_send_feature_reportA', data) as int;
+            if (status < 0)
             {
                 log.error("Error: hid_send_feature_report()");
                 logError();
@@ -197,13 +197,13 @@ package com.hidapi
          * @param data
          * @return
          */
-        public function hid_get_feature_report(data:ByteArray):Boolean
+        public function hid_get_feature_report(data:ByteArray):int
         {
             if(!contextCreated)
-                return false;
+                return -1;
 
-            var status:Boolean = _context.call('hid_get_feature_reportA', data) as Boolean;
-            if (!status)
+            var status:int = _context.call('hid_get_feature_reportA', data) as int;
+            if (status < 0)
             {
                 log.error("Error: hid_send_feature_report()");
                 logError();
@@ -216,13 +216,13 @@ package com.hidapi
          * @param data
          * @return operation status
          */
-        public function hid_write(data:ByteArray):Boolean
+        public function hid_write(data:ByteArray):int
         {
             if(!contextCreated)
-                return false;
+                return -1;
 
-            var status:Boolean = _context.call('hid_writeA', data) as Boolean;
-            if (!status)
+            var status:int = _context.call('hid_writeA', data) as int;
+            if (status < 0)
             {
                 log.error("Error: hid_write()");
                 logError();
@@ -235,13 +235,13 @@ package com.hidapi
          * @param data
          * @return operation status
          */
-        public function hid_read(data:ByteArray):Boolean
+        public function hid_read(data:ByteArray):int
         {
             if(!contextCreated)
-                return false;
+                return -1;
 
-            var status:Boolean = _context.call('hid_readA', data) as Boolean;
-            if (!status)
+            var status:int = _context.call('hid_readA', data) as int;
+            if (status < 0)
             {
                 log.error("Error: hid_read()");
                 logError();
@@ -255,13 +255,13 @@ package com.hidapi
          * @param millis timeout in milliseconds
          * @return operation status
          */
-        public function hid_read_timeout(data:ByteArray, millis:int):Boolean
+        public function hid_read_timeout(data:ByteArray, millis:int):int
         {
             if(!contextCreated)
-                return false;
+                return -1;
 
-            var status:Boolean = _context.call('hid_read_timeoutA', data, millis) as Boolean;
-            if (!status)
+            var status:int = _context.call('hid_read_timeoutA', data, millis) as int;
+            if (status < 0)
             {
                 log.error("Error: hid_read_timeoutA(timeout={0})", millis);
                 logError();
