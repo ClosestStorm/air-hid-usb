@@ -83,7 +83,7 @@
 
 
     <target name="build.all" description="Build all modules and create application installer">
-        <available file="${env.AIR_SDK_HOME}" property="sdk.set"/>
+        <available filepath="${env.AIR_SDK_HOME}" property="sdk.set"/>
 
         <fail message="AIR_SDK_HOME is not set or does not exist (${env.AIR_SDK_HOME})">
             <condition>
