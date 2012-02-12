@@ -121,7 +121,7 @@
             <arg line="${incremental}"/>
             <arg line="-debug=${debug}"/>
             <arg line="-warnings=${warnings}"/>
-            <arg line="-headless=true"/>
+            <arg line="-headless-server=true"/>
             <arg line="-external-library-path+=${app.lib.dir}/${hidapi}.swc"/>
             <arg line="-output ${app.dir}/${application}.swf"/>
             <arg line="-- ${app.src.dir}/${application}.mxml"/>
