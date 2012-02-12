@@ -152,15 +152,23 @@ static hid_device *new_hid_device()
 
 static void register_error(hid_device *device, const char *op)
 {
-	WCHAR *ptr, *msg;
+	WCHAR /**ptr,*/ *msg = NULL;
 
-	FormatMessageW(FORMAT_MESSAGE_ALLOCATE_BUFFER |
+    DWORD errCode = GetLastError();
+    char buffer[2048];
+    sprintf(buffer, "%s: code: %lu", op, errCode);
+
+    int requiredSize = mbstowcs(NULL, buffer, 0);
+    msg = (WCHAR *)malloc((requiredSize + 1) * sizeof(WCHAR));
+    mbstowcs(msg, buffer, requiredSize + 1);
+
+/*	FormatMessageW(FORMAT_MESSAGE_ALLOCATE_BUFFER |
 		FORMAT_MESSAGE_FROM_SYSTEM |
 		FORMAT_MESSAGE_IGNORE_INSERTS,
 		NULL,
 		GetLastError(),
 		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
-		(LPWSTR)&msg, 0/*sz*/,
+		(LPWSTR)&msg, 0,
 		NULL);
 	
 	// Get rid of the CR and LF that FormatMessage() sticks at the
@@ -172,11 +180,12 @@ static void register_error(hid_device *device, const char *op)
 			break;
 		}
 		ptr++;
-	}
+	} */
 
 	// Store the message off in the Device entry so that 
 	// the hid_error() function can pick it up.
-	LocalFree(device->last_error_str);
+//	LocalFree(device->last_error_str);
+	free(device->last_error_str);
 	device->last_error_str = msg;
 }
 
@@ -749,7 +758,8 @@ void HID_API_EXPORT HID_API_CALL hid_close(hid_device *dev)
 	CancelIo(dev->device_handle);
 	CloseHandle(dev->ol.hEvent);
 	CloseHandle(dev->device_handle);
-	LocalFree(dev->last_error_str);
+//	LocalFree(dev->last_error_str);
+ 	free(dev->last_error_str);
 	free(dev->read_buf);
 	free(dev);
 }
