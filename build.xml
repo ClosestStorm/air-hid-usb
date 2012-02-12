@@ -131,7 +131,8 @@
 
     <target name="create.application.package" description="Create application package for current OS">
         <info title="Create application package" description="Create application package"/>
-        <exec executable="${adt}" failonerror="true" dir="${app.dir}">
+        <exec executable="${adt}" failonerror="true" dir="${app.dir}" >
+            <arg line="-Djava.awt.headless=true"/>
             <arg line="-package"/>
             <arg line="-XnoAneValidate"/>
             <arg line="-storetype pkcs12"/>
