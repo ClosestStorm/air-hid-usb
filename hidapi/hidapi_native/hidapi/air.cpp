@@ -738,7 +738,7 @@ extern "C" {
                 int ret = hid_get_manufacturer_string(device, hidString, sizeof(hidString));
                 if(ret >= 0)
                 {
-                    if(hidString != NULL && wcslen(hidString) > 1)
+                    if(is_not_empty_strw(hidString))
                     {
                         char * resultString = (char *) malloc(8192);
                         wcstombs(resultString,  hidString, 8192);
@@ -783,7 +783,7 @@ extern "C" {
                 int ret = hid_get_product_string(device, hidString, sizeof(hidString));
                 if(ret >= 0)
                 {
-                    if(hidString != NULL && wcslen(hidString) > 1)
+                    if(is_not_empty_strw(hidString))
                     {
                         char * resultString = (char *) malloc(8192);
                         wcstombs(resultString,  hidString, 8192);
@@ -828,7 +828,7 @@ extern "C" {
                 int ret = hid_get_serial_number_string(device, hidString, sizeof(hidString));
                 if(ret >= 0)
                 {
-                    if(hidString != NULL && wcslen(hidString) > 1)
+                    if(is_not_empty_strw(hidString))
                     {
                         char * resultString = (char *) malloc(8192);
                         wcstombs(resultString,  hidString, 8192);
@@ -876,7 +876,7 @@ extern "C" {
                 int ret = hid_get_indexed_string(device, index, hidString, sizeof(hidString));
                 if(ret >= 0)
                 {
-                    if(hidString != NULL && wcslen(hidString) > 1)
+                    if(is_not_empty_strw(hidString))
                     {
                         char * resultString = (char *) malloc(8192);
                         wcstombs(resultString,  hidString, 8192);
