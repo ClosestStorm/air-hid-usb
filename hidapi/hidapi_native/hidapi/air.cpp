@@ -44,7 +44,7 @@ extern "C" {
                     return;
                 }
 
-                fprintf(file, msg);
+                fprintf(file, "%s", msg);
                 fprintf(file, "\n");
 
                 fclose(file);
