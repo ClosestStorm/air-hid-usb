@@ -232,6 +232,19 @@ static HANDLE open_device(const char *path, BOOL enumerate)
 		FILE_FLAG_OVERLAPPED,//FILE_ATTRIBUTE_NORMAL,
 		0);
 
+	//mouse support, air-hid-usb
+	if (handle == INVALID_HANDLE_VALUE)
+	{
+		/* Couldn't open the device. Mouse and keyboard*/
+		handle = CreateFileA(path,
+			0,
+			FILE_SHARE_READ|FILE_SHARE_WRITE, /*share mode*/
+			NULL,
+			OPEN_EXISTING,
+			0,//FILE_ATTRIBUTE_NORMAL,
+			0);
+	}
+
 	return handle;
 }
 

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/hidapi/hidapi_native/windows/hid.cpp" line="152" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp" line="741" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="ff23b285-43fd-4c58-a411-9c23c5440c5e" name="Default" comment="">
+    <list default="true" readonly="true" id="ff23b285-43fd-4c58-a411-9c23c5440c5e" name="Default" comment="latest fixes from hidapi &#9;&#9;Windows: Don't let device disappear from hid_enumerate() when open">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/mac/hid.c" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/mac/hid.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/src/DemoHID.mxml" afterPath="$PROJECT_DIR$/application/src/DemoHID.mxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/windows/hid.cpp" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/windows/hid.cpp" />
     </list>
     <ignored path="air-hid-usb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,10 +66,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Hid.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/Hid.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="277" column="0" selection-start="8618" selection-end="8618" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="air.cpp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="843" column="70" selection-start="30618" selection-end="30618" vertical-scroll-proportion="0.0">
+            <state line="26" column="30" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -76,70 +87,48 @@
       <file leaf-file-name="air.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="25" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0">
+            <state line="6" column="24" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HIDDevice.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDDevice.as">
+      <file leaf-file-name="hid.cpp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/windows/hid.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="0" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0">
+            <state line="233" column="32" selection-start="6630" selection-end="6630" vertical-scroll-proportion="0.5588235">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HIDManager.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDManager.as">
+      <file leaf-file-name="DemoHID.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/DemoHID.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="104" column="78" selection-start="3831" selection-end="3831" vertical-scroll-proportion="-7.730769">
+              <folding>
+                <marker date="1329567632513" expanded="true" signature="1049:1424" placeholder="..." />
+                <marker date="1329567632513" expanded="true" signature="1580:2208" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="2259:2306" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="2360:2480" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="2390:2470" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="2535:2628" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="2675:2883" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="2924:4172" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="3237:4162" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="3355:3538" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="3418:3520" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="3567:4148" placeholder="{...}" />
+                <marker date="1329567632513" expanded="true" signature="3751:4092" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hid.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/Hid.as">
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="32" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IHIDDevice.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/IHIDDevice.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="air-manifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/air-manifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="26" selection-start="2185" selection-end="2185" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="local.build.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local.build.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="32" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hid.c" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/mac/hid.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="731" column="50" selection-start="18793" selection-end="18793" vertical-scroll-proportion="0.7220874">
+            <state line="164" column="35" selection-start="6527" selection-end="6527" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -178,13 +167,13 @@
         <option value="$PROJECT_DIR$/hidapi/hidapi_ane/extwin/extension.xml" />
         <option value="$PROJECT_DIR$/hidapi/hidapi_ane/extmac/extension.xml" />
         <option value="$PROJECT_DIR$/application/air-manifest.xml" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp" />
         <option value="$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDManager.as" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/windows/hid.cpp" />
+        <option value="$PROJECT_DIR$/hidapi/hidapi_native/mac/hid.c" />
         <option value="$PROJECT_DIR$/application/src/DemoHID.mxml" />
+        <option value="$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp" />
         <option value="$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h" />
         <option value="$PROJECT_DIR$/local.build.properties" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/mac/hid.c" />
+        <option value="$PROJECT_DIR$/hidapi/hidapi_native/windows/hid.cpp" />
       </list>
     </option>
   </component>
@@ -192,8 +181,10 @@
     <option name="jreName" value="1.5" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="960" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -240,6 +231,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,6 +287,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="windows" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="air-hid-usb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi_native" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="mac" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -311,40 +326,92 @@
               <option name="myItemId" value="hidapi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi_native" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="air-hid-usb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="air-hid-usb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="air-hid-usb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="225" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="303" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="206" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="35" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="295" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="24" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="230" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="305" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="192" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="256" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="186" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="254" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="197" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="872" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="198" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="197" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="259" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="556" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="259" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="258" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="236" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="910" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="309" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="606" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -526,31 +593,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15277778" sideWeight="0.6784141" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15277778" sideWeight="0.6714922" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="jenkinsBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986637" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23608018" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17467949" sideWeight="0.26837417" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3207127" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2421875" sideWeight="0.6784141" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15598291" sideWeight="0.6714922" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3215859" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -589,7 +656,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed/added some error handling&#10;better debug logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="latest fixes from hidapi &#9;&#9;Windows: Don't let device disappear from hid_enumerate() when open" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -607,6 +674,9 @@
     <MESSAGE value="build" />
     <MESSAGE value="register_error does not work as expected, avoiding formatmessage" />
     <MESSAGE value="fixed/added some error handling&#10;better debug logs" />
+    <MESSAGE value="cast to (void*)" />
+    <MESSAGE value="latest fixes from hidapi &#9;Fix hid_enumerate() crash on Mac OS X" />
+    <MESSAGE value="latest fixes from hidapi &#9;&#9;Windows: Don't let device disappear from hid_enumerate() when open" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -636,11 +706,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/ECMAScript.js2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/src/renderer/HEXFunction.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="24" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" />
@@ -651,36 +716,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/windows/hid.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="48" selection-start="5128" selection-end="5128" vertical-scroll-proportion="3.2140431">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/hidapi.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="23" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.019252548" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/DemoHID.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="2776" selection-end="2776" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="843" column="70" selection-start="30618" selection-end="30618" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="25" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDDevice.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDManager.as">
@@ -688,19 +726,14 @@
         <state line="51" column="0" selection-start="1424" selection-end="1424" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/Hid.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="32" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/IHIDDevice.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/air-manifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="26" selection-start="2185" selection-end="2185" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/mac/hid.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="392" column="6" selection-start="8920" selection-end="8920" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/IHIDManager.as">
@@ -708,16 +741,79 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.build.properties">
+    <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="32" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0">
+        <state line="164" column="35" selection-start="6527" selection-end="6527" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/mac/hid.c">
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/Hid.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="731" column="50" selection-start="18793" selection-end="18793" vertical-scroll-proportion="0.7220874">
+        <state line="277" column="0" selection-start="8618" selection-end="8618" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="30" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/DemoHID.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="78" selection-start="3831" selection-end="3831" vertical-scroll-proportion="-7.730769">
+          <folding>
+            <marker date="1329567632513" expanded="true" signature="1049:1424" placeholder="..." />
+            <marker date="1329567632513" expanded="true" signature="1580:2208" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="2259:2306" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="2360:2480" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="2390:2470" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="2535:2628" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="2675:2883" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="2924:4172" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="3237:4162" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="3355:3538" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="3418:3520" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="3567:4148" placeholder="{...}" />
+            <marker date="1329567632513" expanded="true" signature="3751:4092" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="0.2034188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDDevice.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="46" selection-start="4910" selection-end="4910" vertical-scroll-proportion="0.391453">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/IHIDDevice.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="0" selection-start="2997" selection-end="2997" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="24" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/windows/hid.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="32" selection-start="6630" selection-end="6630" vertical-scroll-proportion="0.5588235">
           <folding />
         </state>
       </provider>
