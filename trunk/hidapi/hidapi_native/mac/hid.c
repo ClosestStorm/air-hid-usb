@@ -362,7 +362,7 @@ static int make_path(IOHIDDeviceRef device, char *buf, size_t len)
 	pid = get_product_id(device);
 
 	res = snprintf(buf, len, "%s_%04hx_%04hx_%p",
-	                   transport, vid, pid, device);
+	                   transport, vid, pid, (void*) device);
 	
 	
 	buf[len-1] = '\0';
@@ -729,7 +729,7 @@ hid_device * HID_API_EXPORT hid_open_path(const char *path)
 				
 				/* Create the Run Loop Mode for this device.
 				   printing the reference seems to work. */
-				sprintf(str, "HIDAPI_%p", os_dev);
+				sprintf(str, "HIDAPI_%p", (void*) os_dev);
 				dev->run_loop_mode = 
 					CFStringCreateWithCString(NULL, str, kCFStringEncodingASCII);
 				
