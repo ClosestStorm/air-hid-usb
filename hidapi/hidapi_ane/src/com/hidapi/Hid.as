@@ -95,13 +95,8 @@ package com.hidapi
                 result = [];
             }
 
-            var status:Boolean = _context.call('hid_enumerateA', result, productId, vendorId) as Boolean;
-            if (!status)
-            {
-                log.error("Error: hid_enumerate(productId={0}, vendorId={1})", productId, vendorId);
-                logError();
-            }
-            return status;
+            _context.call('hid_enumerateA', result, productId, vendorId);
+            return true;
         }
 
         /**

@@ -4,7 +4,7 @@
     <name>hidapi</name>
     <copyright>Copyright: (c) 2011. Turtsevich Alexander. Licensed under the MIT license.</copyright>
     <description>HIDAPI wrapper for Adobe AIR. See also http://www.signal11.us/oss/hidapi/</description>
-    <versionNumber>1.0.2</versionNumber>
+    <versionNumber>1.0.3</versionNumber>
     <platforms>
         <platform name="Windows-x86">
             <applicationDeployment>

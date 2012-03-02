@@ -6,16 +6,12 @@
 package com.hidapi
 {
     import flash.events.EventDispatcher;
-    import mx.logging.ILogger;
-    import mx.logging.Log;
 
     /**
      * @private
      */
     internal class HIDManager extends EventDispatcher implements IHIDManager
     {
-        private static const log:ILogger = Log.getLogger("com.hidapi.HIDManager");
-
         private var hid:Hid;
 
         public function HIDManager()
@@ -50,14 +46,6 @@ package com.hidapi
             var result:Array = [];
             var status:Boolean = hid.hid_enumerate(result, productId, vendorId);
             return status ? result : null;
-        }
-
-        /**
-         * @inheritDoc
-         */
-        public function getDeviceListError():String
-        {
-            return hid.hid_error();
         }
     }
 }

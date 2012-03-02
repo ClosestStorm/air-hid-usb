@@ -38,12 +38,5 @@ package com.hidapi
          * @see com.hidapi.IHIDDeviceInfo
          */
         function getDeviceList(productId:uint = 0x0, vendorId:uint = 0x0):Array;
-
-        /**
-         * Get the last error (native)
-         * which occurred in getDeviceList or "" (empty string) if none errors has occurred.
-         * @return error message or "" (empty string) if none errors has occurred
-         */
-        function getDeviceListError():String;
     }
 }
