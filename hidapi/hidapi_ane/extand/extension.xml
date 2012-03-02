@@ -6,9 +6,9 @@
     <description>HIDAPI wrapper for Adobe AIR. See also http://www.signal11.us/oss/hidapi/</description>
     <versionNumber>1.0.3</versionNumber>
     <platforms>
-        <platform name="Windows-x86">
+        <platform name="Android-ARM">
             <applicationDeployment>
-                <nativeLibrary>hidapi.dll</nativeLibrary>
+                <nativeLibrary>hidapi.framework</nativeLibrary>
                 <initializer>initializer</initializer>
                 <finalizer>finalizer</finalizer>
             </applicationDeployment>
