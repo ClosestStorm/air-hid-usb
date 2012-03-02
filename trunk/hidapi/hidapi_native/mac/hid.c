@@ -291,10 +291,10 @@ static int get_string_property(IOHIDDeviceRef device, CFStringRef prop, wchar_t 
 			&used_buf_len);
 
 		buf[chars_copied] = 0;
-		return chars_copied;
+		return 0;
 	}
 	else
-		return 0;
+		return -1;
 		
 }
 
@@ -1127,9 +1127,7 @@ int main(void)
 	CFIndex num_devices = CFSetGetCount(device_set);
 	IOHIDDeviceRef *device_array = calloc(num_devices, sizeof(IOHIDDeviceRef));
 	CFSetGetValues(device_set, (const void **) device_array);
-	
-	setlocale(LC_ALL, "");
-	
+
 	for (i = 0; i < num_devices; i++) {
 		IOHIDDeviceRef dev = device_array[i];
 		printf("Device: %p\n", dev);
