@@ -309,7 +309,9 @@ extern "C" {
                 hid_free_enumeration(devs);
             }
             DEBUG_PRINT("hid_enumerateA success");
-            return get_result_as_boolean(true);
+            //no way to detect HIDAPI errors here...
+            //hid_enumerate returns NULL both on error and when list is empty
+            return NULL;
         }
 
         /*

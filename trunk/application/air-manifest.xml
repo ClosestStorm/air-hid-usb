@@ -26,7 +26,7 @@
 	<description>Demo application</description>
 	<!-- Copyright information. Optional -->
 	<copyright>Copyright: (c) 2011. Turtsevich Alexander (nimrod97@gmail.com)</copyright>
-	<versionNumber>0.0.520</versionNumber>
+	<versionNumber>0.0.521</versionNumber>
 	<!-- Settings for the application's initial window. Required. -->
 	<initialWindow>
 		<!-- The main SWF or HTML file of the application. Required. -->
