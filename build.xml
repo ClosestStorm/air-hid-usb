@@ -83,6 +83,16 @@
 
 
     <target name="build.all" description="Build all modules and create application installer">
+        <available file="${env.AIR_SDK_HOME}" property="sdk.set"/>
+
+        <fail message="AIR_SDK_HOME is not set or does not exist (${env.AIR_SDK_HOME})">
+            <condition>
+                <not>
+                    <isset property="sdk.set"/>
+                </not>
+            </condition>
+        </fail>
+
         <info title="Build all" description="Build all modules and create application installer"/>
         <echo message="AIR_SDK_HOME: ${sdk.dir}"/>
         <echo message="    PLATFORM: ${platform}"/>
@@ -121,7 +131,6 @@
             <arg line="${incremental}"/>
             <arg line="-debug=${debug}"/>
             <arg line="-warnings=${warnings}"/>
-            <arg line="-headless-server=true"/>
             <arg line="-external-library-path+=${app.lib.dir}/${hidapi}.swc"/>
             <arg line="-output ${app.dir}/${application}.swf"/>
             <arg line="-- ${app.src.dir}/${application}.mxml"/>
@@ -131,7 +140,7 @@
 
     <target name="create.application.package" description="Create application package for current OS">
         <info title="Create application package" description="Create application package"/>
-        <exec executable="${adt}" failonerror="true" dir="${app.dir}" >
+        <exec executable="${adt}" failonerror="true" dir="${app.dir}">
             <arg line="-package"/>
             <arg line="-XnoAneValidate"/>
             <arg line="-storetype pkcs12"/>
