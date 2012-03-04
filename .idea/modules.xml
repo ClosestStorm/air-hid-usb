@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/air-hid-usb.iml" filepath="$PROJECT_DIR$/air-hid-usb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hidapi/hidapi_native/android/android.iml" filepath="$PROJECT_DIR$/hidapi/hidapi_native/android/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hidapi/hidapi_native/android/hidapi.iml" filepath="$PROJECT_DIR$/hidapi/hidapi_native/android/hidapi.iml" />
     </modules>
   </component>
 </project>
