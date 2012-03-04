@@ -16,7 +16,7 @@ hidapi.dll: $(src) $(commonFiles)/air.h $(commonFiles)/hidapi.h air
 	g++ $(flags) $(src) $(lib) $(inc) -o ./bin/$(target)
 
 air:
-	convert.bat
+	convert.cmd
 
 clean:
-	convert.bat clean
+	convert.cmd clean

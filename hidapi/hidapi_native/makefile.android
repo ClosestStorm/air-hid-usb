@@ -1,0 +1,13 @@
+# ~ Copyright: (c) 2011. Turtsevich Alexander
+# ~
+# ~ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
+
+all: hidapi.jar
+
+src=./android/src
+
+hidapi.jar: $(src) clean
+	android.cmd release
+
+clean:
+	android.cmd clean
