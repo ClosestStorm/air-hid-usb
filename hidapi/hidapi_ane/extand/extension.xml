@@ -8,9 +8,9 @@
     <platforms>
         <platform name="Android-ARM">
             <applicationDeployment>
-                <nativeLibrary>hidapi.so</nativeLibrary>
-                <initializer>initializer</initializer>
-                <finalizer>finalizer</finalizer>
+                <nativeLibrary>hidapi.jar</nativeLibrary>
+                <initializer>com.hidapi.HidExtension</initializer>
+                <finalizer>com.hidapi.HidExtension</finalizer>
             </applicationDeployment>
         </platform>
     </platforms>
