@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ff23b285-43fd-4c58-a411-9c23c5440c5e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidExtension.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidInitFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="C:\Dev\hidapi\hidapi\hidapi_native\android\hid-libusb.c" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\hidapi\hidapi\hidapi_native\android\hidapi.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\hidapi\hidapi\hidapi_native\android\readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\hidapi\hidapi\hidapi_native\android\src\com\hidapi\HidContext.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\hidapi\hidapi\hidapi_native\android\src\com\hidapi\HidExtension.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\hidapi\hidapi\hidapi_native\android\src\com\hidapi\HidInitFunction.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/android/src" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_ane/extand/extension.xml" afterPath="$PROJECT_DIR$/hidapi/hidapi_ane/extand/extension.xml" />
     </list>
     <ignored path="air-hid-usb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,53 +72,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hid-libusb.c" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/hid-libusb.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="105" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HidExtension.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidExtension.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#557#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="extension.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="extension.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/extand/extension.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="50" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HidContext.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="141" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#614#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#495#516#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HidInitFunction.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidInitFunction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="1" selection-start="49" selection-end="49" vertical-scroll-proportion="0.038946163">
+            <state line="10" column="50" selection-start="537" selection-end="537" vertical-scroll-proportion="0.19473082">
               <folding />
             </state>
           </provider>
@@ -268,38 +226,12 @@
               <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="air-hid-usb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi_native" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -646,17 +578,18 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17467949" sideWeight="0.26837417" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3207127" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15598291" sideWeight="0.6714922" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15598291" sideWeight="0.6703786" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3207127" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -695,7 +628,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="add base linux impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="android impl" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -721,6 +654,7 @@
     <MESSAGE value="ref" />
     <MESSAGE value="api changes" />
     <MESSAGE value="add base linux impl" />
+    <MESSAGE value="android impl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -790,13 +724,6 @@
         <state line="10" column="31" selection-start="518" selection-end="528" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/hidapi.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="743" column="0" selection-start="27049" selection-end="27049" vertical-scroll-proportion="0.0">
@@ -804,49 +731,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/hid-libusb.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="105" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/extand/extension.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="50" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="141" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#614#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#495#516#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidExtension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#557#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidInitFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="1" selection-start="49" selection-end="49" vertical-scroll-proportion="0.038946163">
+        <state line="10" column="50" selection-start="537" selection-end="537" vertical-scroll-proportion="0.19473082">
           <folding />
         </state>
       </provider>
@@ -880,7 +767,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
