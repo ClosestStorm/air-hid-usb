@@ -103,7 +103,7 @@ specify the path to a PNG file included in the AIR package. Optional. -->
    </icon> -->
 	<!-- </fileType> -->
 	<!-- </fileTypes> -->
-	<supportedProfiles>extendedDesktop</supportedProfiles>
+	<supportedProfiles>desktop extendedDesktop mobileDevice extendedMobileDevice</supportedProfiles>
 	<extensions>
 		<extensionID>com.hidapi.Hid</extensionID>
 	</extensions>
