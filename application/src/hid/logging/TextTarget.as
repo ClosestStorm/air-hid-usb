@@ -6,12 +6,17 @@
 
 package hid.logging
 {
-    import mx.controls.TextArea;
+    import flashx.textLayout.conversion.TextConverter;
+    import flashx.textLayout.elements.TextFlow;
+
     import mx.formatters.DateFormatter;
     import mx.logging.AbstractTarget;
     import mx.logging.ILogger;
     import mx.logging.LogEvent;
     import mx.logging.LogEventLevel;
+
+    import spark.components.TextArea;
+    import spark.utils.TextFlowUtil;
 
     public class TextTarget extends AbstractTarget
     {
@@ -38,26 +43,28 @@ package hid.logging
                 var category:String = ILogger(event.target).category + SEPARATOR;
                 var msg:String = date + level + category + event.message;
                 var formatted:String = applyColor(msg, event.level);
-                output.htmlText += formatted + "<br>";
-                output.callLater(output.callLater, [scrollDown, []]);
+//                output.htmlText += formatted + "<br>";
+                output.textFlow = TextFlowUtil.importFromString(output.text + formatted + "<br/>", TextConverter.TEXT_FIELD_HTML_FORMAT);
+//                output.text += msg + "\n";
+//                output.callLater(output.callLater, [scrollDown, []]);
             }
         }
 
-        private function scrollDown():void
-        {
-            output.verticalScrollPosition = output.maxVerticalScrollPosition;
-        }
+//        private function scrollDown():void
+//        {
+//            output.verticalScrollPosition = output.maxVerticalScrollPosition;
+//        }
 
         private function applyColor(msg:String, level:int):String
         {
             switch (level)
             {
                 case LogEventLevel.ERROR:
-                    return "<font color='#FF0000'>" + msg + "</font>";
+                    return "<span color='#FF0000'>" + msg + "</span>";
                 case LogEventLevel.WARN:
-                    return "<font color='#0000FF'>" + msg + "</font>";
+                    return "<span color='#0000FF'>" + msg + "</span>";
                 case LogEventLevel.DEBUG:
-                    return "<font color='#BBBBBB'>" + msg + "</font>";
+                    return "<span color='#BBBBBB'>" + msg + "</span>";
             }
             return msg;
         }

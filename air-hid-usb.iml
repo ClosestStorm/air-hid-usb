@@ -2,7 +2,8 @@
 <module type="Flex" version="4">
   <component name="Flex.Build.Configuration">
     <option name="OUTPUT_FILE_NAME" value="air_hid_usb.swf" />
-    <option name="TARGET_PLAYER_VERSION" value="10.2" />
+    <option name="TARGET_PLAYER_VERSION" value="11.1" />
+    <option name="ADDITIONAL_COMPILER_OPTIONS" value="-define=CONFIG::desktop,true -define=CONFIG::mobile,false" />
     <option name="VERSION" value="3" />
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">

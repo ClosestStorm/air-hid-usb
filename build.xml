@@ -117,11 +117,19 @@
     <target name="build.application" description="Build Air application">
         <info title="Build application" description="Build Air application"/>
         <exec executable="${amxmlc}" failonerror="true">
+            <arg line="-library-path=${env.AIR_SDK_HOME}\frameworks\libs"/>
+            <arg line="-library-path+=${env.AIR_SDK_HOME}\frameworks\libs\air"/>
+            <!--<arg line="-library-path+=${env.AIR_SDK_HOME}\frameworks\libs\mobile"/>-->
+            <arg line="-library-path+=${env.AIR_SDK_HOME}\frameworks\locale\{locale}"/>
             <arg line="-locale en_US"/>
             <arg line="${incremental}"/>
             <arg line="-debug=${debug}"/>
             <arg line="-warnings=${warnings}"/>
             <arg line="-headless-server=true"/>
+            <arg line="-define=CONFIG::desktop,true"/>
+            <arg line="-define=CONFIG::mobile,false"/>
+            <!--<arg line="-preloader mx.preloaders.DownloadProgressBar"/>-->
+            <!--<arg line="-preloader spark.preloaders.SplashScreen"/>-->
             <arg line="-external-library-path+=${app.lib.dir}/${hidapi}.swc"/>
             <arg line="-output ${app.dir}/${application}.swf"/>
             <arg line="-- ${app.src.dir}/${application}.mxml"/>

@@ -16,12 +16,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ff23b285-43fd-4c58-a411-9c23c5440c5e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/src/DesktopApplication.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/src/MobileApplication.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/src/BaseApplication.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/src/MainApplication.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/src/renderer/DeviceRenderer.as" />
+      <change type="DELETED" beforePath="C:\Dev\hidapiA\trunk\application\src\DesktopApplication.as" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\hidapiA\trunk\application\src\MobileApplication.as" afterPath="" />
+      <change type="DELETED" beforePath="C:\Dev\hidapiA\trunk\application\src\renderer\HEXFunction.as" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/air-hid-usb.iml" afterPath="$PROJECT_DIR$/air-hid-usb.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/air-manifest.xml" afterPath="$PROJECT_DIR$/application/air-manifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/src/DemoHID.mxml" afterPath="$PROJECT_DIR$/application/src/DemoHID.mxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/src/hid/logging/TextTarget.as" afterPath="$PROJECT_DIR$/application/src/hid/logging/TextTarget.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/android/hidapi.iml" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/hidapi.iml" />
     </list>
     <ignored path="air-hid-usb.iws" />
@@ -83,51 +91,58 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="3" selection-start="7921" selection-end="7921" vertical-scroll-proportion="0.0">
+            <state line="122" column="73" selection-start="4943" selection-end="4943" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DemoHID.mxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/DemoHID.mxml">
+      <file leaf-file-name="air-manifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/air-manifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="595" selection-end="595" vertical-scroll-proportion="0.30769232">
+            <state line="16" column="65" selection-start="846" selection-end="846" vertical-scroll-proportion="0.15570934">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="local.build.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local.build.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainApplication.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/MainApplication.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="153" column="0" selection-start="4868" selection-end="4868" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1331316216893" expanded="true" signature="771:1067" placeholder="..." />
-                <marker date="1331316216893" expanded="true" signature="1231:1865" placeholder="{...}" />
-                <marker date="1331316216893" expanded="true" signature="1924:1971" placeholder="{...}" />
-                <marker date="1331316216893" expanded="true" signature="2033:2165" placeholder="{...}" />
-                <marker date="1331316216893" expanded="true" signature="2075:2155" placeholder="{...}" />
-                <marker date="1331316216893" expanded="true" signature="2228:2321" placeholder="{...}" />
-                <marker date="1331316216893" expanded="true" signature="2376:2586" placeholder="{...}" />
+                <element signature="e#157#186#0" expanded="true" />
+                <element signature="e#831#870#0" expanded="true" />
+                <element signature="e#918#944#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MobileApplication.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/src/MobileApplication.as">
+      <file leaf-file-name="DeviceRenderer.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/renderer/DeviceRenderer.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="31" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="8" column="0" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#166#190#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DesktopApplication.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/src/DesktopApplication.as">
+      <file leaf-file-name="BaseApplication.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/src/BaseApplication.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="63" selection-start="343" selection-end="343" vertical-scroll-proportion="0.31965813">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="extension.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/extand/extension.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="32" selection-start="437" selection-end="448" vertical-scroll-proportion="0.0">
+            <state line="24" column="34" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,22 +163,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/android/local.properties" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidContext.java" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/android/ant.properties" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/android.cmd" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/android/project.properties" />
-        <option value="$PROJECT_DIR$/local.build.properties" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/bin/extension.xml" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/android/build.xml" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/makefile.win" />
-        <option value="$PROJECT_DIR$/hidapi/hidapi_native/makefile.android" />
-        <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/application/src/view/LogView.mxml" />
-        <option value="$PROJECT_DIR$/application/src/view/DeviceView.mxml" />
-        <option value="$PROJECT_DIR$/application/src/DemoHID.mxml" />
-        <option value="$PROJECT_DIR$/application/src/MobileApplication.as" />
         <option value="$PROJECT_DIR$/application/src/DesktopApplication.as" />
+        <option value="$PROJECT_DIR$/application/src/DemoApplication.as" />
+        <option value="$PROJECT_DIR$/application/air-manifest.xml" />
+        <option value="$PROJECT_DIR$/application/src/DesktopApplication.mxml" />
+        <option value="$PROJECT_DIR$/application/src/MobileApplication.mxml" />
+        <option value="$PROJECT_DIR$/application/src/DemoHID.as" />
+        <option value="$PROJECT_DIR$/application/src/DemoHID.mxml" />
+        <option value="$PROJECT_DIR$/application/src/Main.as" />
+        <option value="$PROJECT_DIR$/application/src/BaseApplication.as" />
+        <option value="$PROJECT_DIR$/application/src/hid/logging/TextTarget.as" />
+        <option value="$PROJECT_DIR$/application/src/skins/ContainerBorderSkin.mxml" />
+        <option value="$PROJECT_DIR$/application/src/skins/ComponentBorderSkin.mxml" />
+        <option value="$PROJECT_DIR$/application/src/MainApplication.as" />
+        <option value="$PROJECT_DIR$/application/src/renderer/DeviceRenderer.as" />
+        <option value="$PROJECT_DIR$/local.build.properties" />
+        <option value="$PROJECT_DIR$/build.xml" />
       </list>
     </option>
   </component>
@@ -221,6 +236,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -274,7 +290,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,14 +317,18 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="fud_pw_h" value="1040" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="309" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="606" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="fud_pw_w" value="1920" />
     <property name="options.lastSelected" value="preferences.sourceCode.ActionScript" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="fud_pw_y" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="fud_pw_x" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -321,6 +340,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dev\hidapi\hidapi\hidapi_ane\extand" />
+    </key>
+    <key name="JSIntroduceConstantDialog">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="AIR.debug">
@@ -517,12 +539,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13354701" sideWeight="0.6792873" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13354701" sideWeight="0.6714922" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="jenkinsBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986637" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -530,19 +552,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17467949" sideWeight="0.26837417" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207127" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3207127" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15598291" sideWeight="0.6792873" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15598291" sideWeight="0.6714922" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11378205" sideWeight="0.6714922" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29220086" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29220086" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -638,93 +660,114 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidExtension.java">
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/IHIDManager.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" />
+        <state line="12" column="21" selection-start="296" selection-end="296" vertical-scroll-proportion="-0.05882353" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/convert.cmd">
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HIDFactory.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="19" column="31" selection-start="490" selection-end="490" vertical-scroll-proportion="0.3529412" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidInitFunction.java">
+    <entry file="file://$PROJECT_DIR$/../../air3.0/frameworks/projects/mx/src/mx/controls/Button.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="419" selection-end="419" vertical-scroll-proportion="0.3115693" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="47" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/makefile.win">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="27" selection-end="27" vertical-scroll-proportion="0.05811966" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/makefile.android">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="15" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.build.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="183" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="123" selection-start="3643" selection-end="3643" vertical-scroll-proportion="0.47692308" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="46" selection-start="567" selection-end="567" vertical-scroll-proportion="0.4940171" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/extand/extension.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32" selection-start="437" selection-end="448" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="3" selection-start="7921" selection-end="7921" vertical-scroll-proportion="0.0">
+        <state line="714" column="20" selection-start="21946" selection-end="21946" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/DemoHID.mxml">
+    <entry file="file://$PROJECT_DIR$/../../air3.0/frameworks/projects/spark/src/spark/components/SkinnableContainer.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="595" selection-end="595" vertical-scroll-proportion="0.30769232">
+        <state line="336" column="13" selection-start="9802" selection-end="9802" vertical-scroll-proportion="0.33217993">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../air3.0/frameworks/projects/spark/src/spark/components/DataGroup.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="20" selection-start="5603" selection-end="5603" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../air3.0/frameworks/projects/spark/src/spark/components/Group.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1341" column="0" selection-start="44257" selection-end="44257" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../air3.0/frameworks/projects/spark/src/spark/components/Application.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1354" column="0" selection-start="43084" selection-end="43084" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../air3.0/frameworks/projects/spark/src/spark/components/supportClasses/SkinnableComponent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="13" selection-start="3437" selection-end="3437" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../air3.0/frameworks/projects/spark/src/spark/components/Scroller.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="541" column="20" selection-start="18350" selection-end="18350" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../air3.0/frameworks/projects/spark/src/spark/components/DataRenderer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="13" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/MainApplication.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="0" selection-start="4868" selection-end="4868" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1331316216893" expanded="true" signature="771:1067" placeholder="..." />
-            <marker date="1331316216893" expanded="true" signature="1231:1865" placeholder="{...}" />
-            <marker date="1331316216893" expanded="true" signature="1924:1971" placeholder="{...}" />
-            <marker date="1331316216893" expanded="true" signature="2033:2165" placeholder="{...}" />
-            <marker date="1331316216893" expanded="true" signature="2075:2155" placeholder="{...}" />
-            <marker date="1331316216893" expanded="true" signature="2228:2321" placeholder="{...}" />
-            <marker date="1331316216893" expanded="true" signature="2376:2586" placeholder="{...}" />
+            <element signature="e#157#186#0" expanded="true" />
+            <element signature="e#831#870#0" expanded="true" />
+            <element signature="e#918#944#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/MobileApplication.as">
+    <entry file="file://$PROJECT_DIR$/application/src/BaseApplication.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+        <state line="24" column="34" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/src/renderer/DeviceRenderer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#166#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/src/DesktopApplication.as">
+    <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="63" selection-start="343" selection-end="343" vertical-scroll-proportion="0.31965813">
+        <state line="122" column="73" selection-start="4943" selection-end="4943" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/air-manifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="65" selection-start="846" selection-end="846" vertical-scroll-proportion="0.15570934">
           <folding />
         </state>
       </provider>
