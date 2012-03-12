@@ -26,7 +26,7 @@
 	<description>Demo application</description>
 	<!-- Copyright information. Optional -->
 	<copyright>Copyright: (c) 2011. Turtsevich Alexander (nimrod97@gmail.com)</copyright>
-	<versionNumber>0.0.521</versionNumber>
+	<versionNumber>0.0.522</versionNumber>
 	<!-- Settings for the application's initial window. Required. -->
 	<initialWindow>
 		<!-- The main SWF or HTML file of the application. Required. -->
@@ -103,7 +103,7 @@ specify the path to a PNG file included in the AIR package. Optional. -->
    </icon> -->
 	<!-- </fileType> -->
 	<!-- </fileTypes> -->
-	<supportedProfiles>desktop extendedDesktop mobileDevice extendedMobileDevice</supportedProfiles>
+	<supportedProfiles>extendedDesktop</supportedProfiles>
 	<extensions>
 		<extensionID>com.hidapi.Hid</extensionID>
 	</extensions>
