@@ -87,6 +87,8 @@ package
         {
             CONFIG::desktop
             {
+                this.width = 500;
+                this.height = 500;
                 var visibleBounds:Rectangle = Screen.mainScreen.visibleBounds;
                 this.move(visibleBounds.width / 2 - this.width / 2, visibleBounds.height / 2 - this.height / 2);
                 this.title = "DemoHID";
