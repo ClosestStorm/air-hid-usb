@@ -10,7 +10,7 @@
     <property environment="env" description="Environment variables"/>
 
     <property name="sdk.dir" location="${env.ANDROID_SDK_HOME}"/>
-    <property name="jar.libs.dir" location="${env.AIR_SDK_HOME}/lib/android/"/>
+    <!--<property name="jar.libs.dir" location="${env.AIR_SDK_HOME}/lib/android/"/>-->
 
     <!-- The local.properties file is created and updated by the 'android' tool.
          It contains the path to the SDK. It should *NOT* be checked into

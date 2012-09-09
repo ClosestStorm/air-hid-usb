@@ -203,7 +203,7 @@
             <arg line="-storetype pkcs12"/>
             <arg line="-storepass ${storepass}"/>
             <arg line="-keystore ${keystore}"/>
-            <!--<arg line="-tsa none"/>-->
+            <arg line="-tsa none"/>
             <arg line="-target ane"/>
             <arg line="${app.ext.dir}/${hidapi}.ane"/>
             <arg line="extension.xml"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module type="ANDROID_MODULE" version="4">
+<module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android" name="Android">
       <configuration>
@@ -20,6 +20,12 @@
         <option name="RUN_PROCESS_RESOURCES_MAVEN_TASK" value="true" />
         <option name="GENERATE_UNSIGNED_APK" value="false" />
         <option name="CUSTOM_DEBUG_KEYSTORE_PATH" value="" />
+        <option name="PACK_TEST_CODE" value="false" />
+        <option name="RUN_PROGUARD" value="false" />
+        <option name="PROGUARD_CFG_PATH" value="/proguard-project.txt" />
+        <resOverlayFolders />
+        <includeSystemProguardFile>false</includeSystemProguardFile>
+        <additionalNativeLibs />
       </configuration>
     </facet>
   </component>
@@ -34,11 +40,10 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../../../../air3.0/lib/android" />
+          <root url="jar://$MODULE_DIR$/../../../../../../SDKs/air3.0_4.6/lib/android/FlashRuntimeExtensions.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../../../../air3.0/lib/android" recursive="false" />
       </library>
     </orderEntry>
   </component>
