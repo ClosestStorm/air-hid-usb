@@ -6,6 +6,7 @@
 
 package com.hidapi;
 
+import android.util.Log;
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREExtension;
 
@@ -18,14 +19,13 @@ public class HidExtension implements FREExtension
 
     public void dispose()
     {
-        // TODO Auto-generated method stub
+        Log.i("HidContext", "dispose");
 
     }
 
     public void initialize()
     {
-        // TODO Auto-generated method stub
-
+        Log.i("HidContext", "initialize");
     }
 
 }

@@ -10,8 +10,10 @@ import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
 
-public class HidInitFunction implements FREFunction
+public class HidGetManufacturerStringFunction implements FREFunction
 {
+    public static final String FUNCTION_NAME = "hid_get_manufacturer_stringA";
+
     public FREObject call(FREContext context, FREObject[] passedArgs)
     {
         HidContext hidContext = (HidContext) context;

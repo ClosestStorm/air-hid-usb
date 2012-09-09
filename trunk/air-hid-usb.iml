@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="Flex.Build.Configuration">
-    <option name="OUTPUT_FILE_NAME" value="air_hid_usb.swf" />
-    <option name="TARGET_PLAYER_VERSION" value="11.1" />
-    <option name="ADDITIONAL_COMPILER_OPTIONS" value="-define=CONFIG::desktop,true -define=CONFIG::mobile,false" />
-    <option name="VERSION" value="3" />
+  <component name="FlexBuildConfigurationManager" active="air-hid-usb">
+    <configurations>
+      <configuration name="air-hid-usb" target-platform="Desktop" main-class="DemoHID" output-file="air_hid_usb.swf" output-folder="$MODULE_DIR$/out/production/air-hid-usb" skip-build="true">
+        <dependencies>
+          <sdk name="air3.0_4.6" />
+        </dependencies>
+        <compiler-options>
+          <option name="additionalOptions" value="-define=CONFIG::desktop,true -define=CONFIG::mobile,false" />
+        </compiler-options>
+        <packaging-air-desktop package-file-name="air-hid-usb" />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -15,7 +25,7 @@
       <sourceFolder url="file://$MODULE_DIR$/hidapi/hidapi_native/mac" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/hidapi/hidapi_native/windows" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="air3.0 AIR" jdkType="AIR SDK Type" />
+    <orderEntry type="jdk" jdkName="air3.0_4.6" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
