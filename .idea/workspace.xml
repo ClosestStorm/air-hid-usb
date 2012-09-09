@@ -16,32 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="ff23b285-43fd-4c58-a411-9c23c5440c5e" name="Default" comment="android impl">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/libs/FlashRuntimeExtensions.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/libs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidCloseFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidErrorFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidGetFeatureReportFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidGetIndexedStringFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidGetManufacturerStringFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidGetProductStringFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidGetSerialNumberStringFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidOpenFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidOpenPathFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidReadFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidReadTimeoutFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidSendFeatureReportFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidSetNonBlockingFunction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidWriteFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/air-hid-usb.iml" afterPath="$PROJECT_DIR$/air-hid-usb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/android/build.xml" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/android/hidapi.iml" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/hidapi.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidContext.java" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidExtension.java" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidExtension.java" />
-      <change type="MOVED" beforePath="D:\Dev\Projects\hidapiA\trunk\hidapi\hidapi_native\android\src\com\hidapi\HidInitFunction.java" afterPath="$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidEnumerateFunction.java" />
     </list>
     <ignored path="air-hid-usb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,9 +79,7 @@
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidOpenPathFunction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="12" column="2" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,7 +123,7 @@
       <file leaf-file-name="HidEnumerateFunction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidEnumerateFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="18" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.89260143">
+            <state line="32" column="19" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.5680191">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,9 +144,7 @@
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidCloseFunction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="12" column="13" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -190,9 +162,7 @@
         <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HidDeviceInfo.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="24" column="40" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -280,6 +250,26 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="air-hid-usb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -490,42 +480,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="air-hid-usb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="301" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="293" />
     <property name="project.structure.last.edited" value="Modules" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="293" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="24" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="303" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="303" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="254" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="252" />
@@ -537,24 +507,24 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="fud_pw_h" value="1040" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="307" />
-    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="fud_pw_h" value="1040" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="601" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="fud_pw_w" value="1920" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
-    <property name="fud_pw_y" value="0" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
+    <property name="fud_pw_w" value="1920" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
-    <property name="fud_pw_x" value="0" />
+    <property name="fud_pw_y" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="fud_pw_x" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
@@ -580,7 +550,7 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Flash App.air-hid-usb">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -737,7 +707,44 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="0" />
+    <configuration default="false" name="air-hid-usb" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="air-hid-usb" />
+      <option name="adlOptions" value="-extdir d:\Dev\Projects\hidapiA\trunk\application\extensions\unpacked" />
+      <option name="airProgramParameters" value="-profile extendedDesktop" />
+      <option name="appDescriptorForEmulator" value="Generated" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="air-hid-usb" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <RunnerSettings RunnerId="FlexRunner" />
+      <ConfigurationWrapper RunnerId="FlexRunner" />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Flash App.air-hid-usb" />
+    </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -806,7 +813,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13354701" sideWeight="0.671875" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13354701" sideWeight="0.671875" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="jenkinsBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986637" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17467949" sideWeight="0.26837417" order="2" side_tool="true" content_ui="tabs" />
@@ -815,6 +822,7 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Kahlua" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3203125" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -823,14 +831,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22222222" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11378205" sideWeight="0.6714922" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29220086" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3203125" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -952,9 +959,7 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../../SDKs/air3.0_4.6/lib/android/FlashRuntimeExtensions.jar!/com/adobe/fre/FREFunction.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="155" selection-end="155" vertical-scroll-proportion="0.08232445">
-          <folding />
-        </state>
+        <state line="5" column="17" selection-start="155" selection-end="155" vertical-scroll-proportion="0.08232445" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidOpenFunction.java">
@@ -964,12 +969,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../SDKs/android-sdk/platforms/android-13/android.jar!/android/hardware/usb/UsbDevice.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="15" selection-start="552" selection-end="552" vertical-scroll-proportion="0.29964748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidOpenPathFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="2" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,9 +1011,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../SDKs/android-sdk/platforms/android-13/android.jar!/android/hardware/usb/UsbDevice.class">
+    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="15" selection-start="552" selection-end="552" vertical-scroll-proportion="0.29964748">
+        <state line="15" column="13" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1011,9 +1021,7 @@
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidCloseFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,25 +1032,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_ane/src/com/hidapi/HidDeviceInfo.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="40" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/src/com/hidapi/HidEnumerateFunction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="18" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.89260143">
+        <state line="32" column="19" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.5680191">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1113,7 +1112,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>hidapi</last-edited>
+          <last-edited>air-hid-usb|air-hid-usb</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

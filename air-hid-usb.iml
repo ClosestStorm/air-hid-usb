@@ -2,14 +2,14 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="air-hid-usb">
     <configurations>
-      <configuration name="air-hid-usb" target-platform="Desktop" main-class="DemoHID" output-file="air_hid_usb.swf" output-folder="$MODULE_DIR$/out/production/air-hid-usb" skip-build="true">
+      <configuration name="air-hid-usb" target-platform="Desktop" main-class="DemoHID" output-file="air_hid_usb.swf" output-folder="$MODULE_DIR$/application" skip-build="true">
         <dependencies>
           <sdk name="air3.0_4.6" />
         </dependencies>
         <compiler-options>
           <option name="additionalOptions" value="-define=CONFIG::desktop,true -define=CONFIG::mobile,false" />
         </compiler-options>
-        <packaging-air-desktop package-file-name="air-hid-usb" />
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/application/air-manifest.xml" package-file-name="air-hid-usb" />
         <packaging-android />
         <packaging-ios />
       </configuration>
