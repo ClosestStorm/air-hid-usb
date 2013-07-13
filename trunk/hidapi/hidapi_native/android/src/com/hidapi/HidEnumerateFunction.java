@@ -6,8 +6,15 @@
 
 package com.hidapi;
 
+import android.content.Context;
 import android.hardware.usb.*;
+import android.util.Log;
 import com.adobe.fre.*;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class HidEnumerateFunction implements FREFunction
 {
@@ -30,11 +37,48 @@ public class HidEnumerateFunction implements FREFunction
     {
         HidContext hidContext = (HidContext) context;
 
-//        UsbDevice usbDevice;
-//        UsbDeviceConnection usbDeviceConnection = new UsbManager().openDevice(usbDevice);
-//        usbDeviceConnection.
+        Log.i("HidEnumerateFunction", "api level: " + android.os.Build.VERSION.SDK_INT);
 
-        return null;
+        UsbManager usbService = (UsbManager) hidContext.getActivity().getSystemService(Context.USB_SERVICE);
+
+        FREArray freArray = (FREArray)passedArgs[0];
+        try
+        {
+            if (usbService != null)
+            {
+                Log.i("HidEnumerateFunction", "got UsbManager");
+
+                HashMap<String, UsbDevice> deviceList = usbService.getDeviceList();
+
+                List<FREObject> freObjects = new LinkedList<FREObject>();
+
+                for (Map.Entry<String, UsbDevice> stringUsbDeviceEntry : deviceList.entrySet())
+                {
+                    Log.i("HidEnumerateFunction", "device: " + stringUsbDeviceEntry.getKey() + " - " + stringUsbDeviceEntry.getValue().getVendorId());
+                    FREObject hidDeviceInfo = createInfo(stringUsbDeviceEntry.getValue());
+                    if(hidDeviceInfo != null)
+                        freObjects.add(hidDeviceInfo);
+                }
+
+                freArray.setLength(freObjects.size());
+                int i = 0;
+                for (FREObject freObject : freObjects)
+                {
+                    freArray.setObjectAt(i, freObject);
+                    i++;
+                }
+            }
+            else
+            {
+                Log.w("HidEnumerateFunction", "Failed to get UsbManager system service");
+            }
+        }
+        catch (Exception e)
+        {
+            Log.e("HidEnumerateFunction", "error", e);
+        }
+
+        return freArray;
     }
 
     private FREObject createInfo(UsbDevice usbDevice) throws FREWrongThreadException, FRENoSuchNameException, FRETypeMismatchException, FREASErrorException, FREInvalidObjectException, FREReadOnlyException
@@ -45,8 +89,6 @@ public class HidEnumerateFunction implements FREFunction
             hidDeviceInfo.setProperty(PROPERTY_PRODUCTID, FREObject.newObject(usbDevice.getProductId()));
             hidDeviceInfo.setProperty(PROPERTY_VENDORID, FREObject.newObject(usbDevice.getVendorId()));
 
-//            usbDevice.
-
             int interfaceCount = usbDevice.getInterfaceCount();
 
             for (int i = 0; i < interfaceCount; i++)
@@ -55,7 +97,6 @@ public class HidEnumerateFunction implements FREFunction
             }
 
             return hidDeviceInfo;
-
         }
         return null;
     }
