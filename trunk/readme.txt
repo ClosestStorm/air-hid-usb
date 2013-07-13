@@ -1,6 +1,6 @@
 1. License information: LICENSE-MIT.txt
 2. Requirements: Java runtime, Apache Ant, MinGW (Windows),
-   MinGW-Utils 0.3 (Windows), XCode (Mac OS X)
+   MinGW-Utils 0.3 (Windows), XCode (Mac OS X), Android SDK (API 10)
 3. Building extension for both Windows and Mac OS does not make sense,
    because native installer must be used anyway. This is why extension is
    build separately for each platform.
