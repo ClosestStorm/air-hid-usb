@@ -20,7 +20,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://D:/SDKs/air3.0_4.6/lib/android/FlashRuntimeExtensions.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../../SDKs/air3.0_4.6/lib/android/FlashRuntimeExtensions.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -28,3 +28,4 @@
     </orderEntry>
   </component>
 </module>
+
