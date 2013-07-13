@@ -4,10 +4,13 @@
 
 all: hidapi.jar
 
-src=./android/src
+android=./android
+build.xml=$(android)/build.xml
+src=$(android)/src
 
 hidapi.jar: $(src) clean
-	android.cmd release
+	ant -f $(build.xml) release
+	cp $(android)/bin/classes.jar ./bin/hidapi.jar -f
 
 clean:
-	android.cmd clean
+	ant -f $(build.xml) clean
