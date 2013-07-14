@@ -76,9 +76,9 @@
            If this is not done in place, override ${out.dex.input.absolute.dir} */
     -->
     <target name="-post-compile">
-
+        <jar destfile="bin/hidapi.jar"
+             basedir="bin/classes"/>
     </target>
-
 
     <!-- Compiles this project's .java files into .class files. -->
     <target name="-compile" depends="-build-setup, -pre-build, -code-gen, -pre-compile">

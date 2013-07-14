@@ -10,7 +10,7 @@ src=$(android)/src
 
 hidapi.jar: $(src) clean
 	ant -f $(build.xml) release
-	cp $(android)/bin/classes.jar ./bin/hidapi.jar -f
+	cp $(android)/bin/hidapi.jar ./bin/hidapi.jar -f
 
 clean:
 	ant -f $(build.xml) clean
