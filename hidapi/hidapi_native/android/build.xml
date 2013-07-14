@@ -81,7 +81,7 @@
            If this is not done in place, override ${out.dex.input.absolute.dir} */
     -->
     <target name="-post-compile">
-        <copy file="bin/classes.jar" tofile="../bin/${hidapi}.jar" failonerror="true"/>
+
     </target>
 
 
