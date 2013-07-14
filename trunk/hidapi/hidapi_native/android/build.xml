@@ -76,7 +76,7 @@
            If this is not done in place, override ${out.dex.input.absolute.dir} */
     -->
     <target name="-post-compile">
-        <jar destfile="bin/hidapi.jar"
+        <jar destfile="bin/classes.jar"
              basedir="bin/classes"/>
     </target>
 
