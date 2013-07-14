@@ -11,13 +11,8 @@
 
     <property name="sdk.dir" location="${env.ANDROID_SDK_HOME}"/>
     <property name="jar.libs.dir" location="${env.AIR_SDK_HOME}/lib/android/"/>
+    <property name="target" value="android-12"/>
     <echo message="${jar.libs.dir}"/>
-
-    <!-- The local.properties file is created and updated by the 'android' tool.
-         It contains the path to the SDK. It should *NOT* be checked into
-         Version Control Systems. -->
-    <!--<property file="local.properties" />-->
-    <property file="../../../local.build.properties"/>
 
     <!-- The ant.properties file can be created by you. It is only edited by the
          'android' tool to add properties to it.
