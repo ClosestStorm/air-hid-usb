@@ -1,0 +1,92 @@
+/*
+ * Copyright: (c) 2013. Turtsevich Alexander
+ *
+ * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
+ */
+
+task create_swc(type: Exec) {
+    description "Build ActionScript"
+    commandLine project.ext.acompc, "-locale", "en_US", "${incremental}", "-debug=${debug}", "-warnings=${warnings}", "-output", "${project.ext.libraries}/${project.ext.swc}", "-source-path+=${project.ext.hidapi_as3}", "-include-sources=${project.ext.hidapi_as3}"
+
+    doFirst {
+        println "${description}"
+    }
+    doLast {
+        ant.copy (file: "${project.ext.libraries}/${project.ext.swc}", todir: project.ext.hidapi_bin, overwrite: true, failonerror: true)
+        ant.unzip(src: "${project.ext.hidapi_bin}/${project.ext.swc}", dest: project.ext.hidapi_bin) {
+            patternset {
+                include(name: 'library.swf')
+            }
+        }
+    }
+}
+
+task create_native(type: Exec) {
+    description "Build Native"
+    workingDir project.ext.hidapi_native
+    commandLine project.ext.make, "-f", project.ext.makefile, "all"
+    doFirst {
+        println "${description}"
+    }
+}
+
+task clean_native(type: Exec) {
+    description "Clean Native"
+    workingDir project.ext.hidapi_native
+    commandLine project.ext.make, "-f", project.ext.makefile, "clean"
+    doFirst {
+        println "${description}"
+    }
+}
+
+task create_ane(type: Exec) {
+    description "Package Extension"
+    workingDir project.ext.hidapi_bin
+    commandLine project.ext.adt, "-package", "-storetype", "pkcs12", "-storepass", storepass, "-keystore", project.ext.keystore, "-target", "ane", "${project.ext.hidapi_bin}/${project.ext.ane}", "extension.xml", "-swc", "${project.ext.swc}", "-platform", project.ext.platform, "library.swf", project.ext.native
+    doFirst {
+        println "${description}"
+        ant.copy (file: project.ext.descriptor, todir: project.ext.hidapi_bin, overwrite: true, failonerror: true)
+    }
+    doLast {
+        ant.copy (file: "${project.ext.hidapi_bin}/${project.ext.ane}", todir: project.ext.extensions, overwrite: true, failonerror: true)
+    }
+}
+
+task create_asdoc(type: Exec) {
+    description "Build Documentation"
+    commandLine project.ext.aasdoc, "-output", project.ext.doc, "--doc-sources=${project.ext.hidapi_as3}"
+    doFirst {
+        println "${description}"
+    }
+    doLast {
+        ant.zip(destfile: "${project.ext.hidapi_bin}/${project.ext.doc_zip}") {
+            fileset(dir: project.ext.doc) {
+                include(name: '**')
+            }
+        }
+    }
+}
+
+task clean {
+    description "Clean Extension"
+    doFirst {
+        println "${description}"
+        clean_native.execute()
+        ant.delete(dir: project.ext.doc, failonerror:true)
+        ant.delete(dir: project.ext.hidapi_bin, failonerror: true)
+        ant.mkdir(dir: project.ext.hidapi_bin)
+        ant.mkdir(dir: project.ext.doc)
+    }
+}
+
+task build {
+    description "Build Extension"
+
+    doFirst {
+        println "${description}"
+        create_swc.execute()
+        create_native.execute()
+        create_ane.execute()
+        create_asdoc.execute()
+    }
+}

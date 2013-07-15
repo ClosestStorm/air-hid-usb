@@ -1,8 +1,23 @@
 {
-	"folders":
-	[
-		{
-			"path": "./"
-		}
-	]
+    "folders":
+    [
+        {
+            "path": ".",
+            "name": "air-hid-usb",
+            "folder_exclude_patterns": [".gradle", ".idea"],
+            "follow_symlinks": true
+        }
+    ],
+    "settings":
+    {
+        "tab_size": 8
+    },
+    "build_systems":
+    [
+        {
+            "name": "Gradle",
+            "shell_cmd": "gradle",
+            "encoding": "cp1251"
+        }
+    ]
 }

@@ -25,8 +25,8 @@
 	<!-- Description, displayed in the AIR application installer. Optional. -->
 	<description>Demo application</description>
 	<!-- Copyright information. Optional -->
-	<copyright>Copyright: (c) 2011. Turtsevich Alexander (nimrod97@gmail.com)</copyright>
-	<versionNumber>0.0.522</versionNumber>
+	<copyright>Copyright: (c) 2013. Turtsevich Alexander (nimrod97@gmail.com)</copyright>
+	<versionNumber>0.0.523</versionNumber>
 	<!-- Settings for the application's initial window. Required. -->
 	<initialWindow>
 		<!-- The main SWF or HTML file of the application. Required. -->
@@ -76,6 +76,33 @@ specify the path to a PNG file included in the AIR package. Optional. -->
 		<image48x48>style/app/usb_48.png</image48x48>
 		<image128x128>style/app/usb_128.png</image128x128>
 	</icon>
+    <android>
+        <colorDepth>16bit</colorDepth>
+        <manifestAdditions><![CDATA[
+			<manifest android:installLocation="auto">
+			 <uses-sdk android:minSdkVersion="10" />
+			    <!--See the Adobe AIR documentation for more information about setting Google Android permissions-->
+			    <!--Removing the permission android.permission.INTERNET will have the side effect
+		of preventing you from debugging your application on your device-->
+			    <uses-permission android:name="android.permission.INTERNET"/>
+			    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+			    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+			    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+			    <!--The DISABLE_KEYGUARD and WAKE_LOCK permissions should be toggled together
+		in order to access AIR's SystemIdleMode APIs-->
+			    <!--<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>-->
+			    <!--<uses-permission android:name="android.permission.WAKE_LOCK"/>-->
+			    <!--<uses-permission android:name="android.permission.CAMERA"/>-->
+			    <!--<uses-permission android:name="android.permission.RECORD_AUDIO"/>-->
+			    <!--The ACCESS_NETWORK_STATE and ACCESS_WIFI_STATE permissions should be toggled
+		together in order to use AIR's NetworkInfo APIs-->
+			    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+			    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>-->
+			    <uses-feature android:name="android.hardware.usb.host" />
+			</manifest>
+
+		]]></manifestAdditions>
+    </android>
 	<!-- Whether the application handles the update when a user double-clicks an update version
  of the AIR file (true), or the default AIR application installer handles the update (false).
  Optional. Default false. -->
@@ -103,7 +130,7 @@ specify the path to a PNG file included in the AIR package. Optional. -->
    </icon> -->
 	<!-- </fileType> -->
 	<!-- </fileTypes> -->
-	<supportedProfiles>extendedDesktop</supportedProfiles>
+	<supportedProfiles>extendedDesktop extendedMobileDevice mobileDevice</supportedProfiles>
 	<extensions>
 		<extensionID>com.hidapi.Hid</extensionID>
 	</extensions>

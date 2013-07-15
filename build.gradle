@@ -1,0 +1,110 @@
+/*
+ * Copyright: (c) 2013. Turtsevich Alexander
+ *
+ * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
+ */
+
+import org.apache.tools.ant.taskdefs.condition.Os
+
+allprojects {
+
+    //paths and names
+    project.ext.root = rootProject.projectDir.getAbsolutePath()
+
+    project.ext.release = project.ext.root + "/release"
+
+    project.ext.application = project.ext.root + "/hidapi_demo"
+    project.ext.application_as3 = project.ext.application + "/src"
+    project.ext.libraries = project.ext.application + "/lib"
+    project.ext.extensions = project.ext.application + "/extensions"
+    project.ext.unpacked = project.ext.extensions + "/unpacked"
+
+    project.ext.doc = project.ext.root + "/hidapi/doc"
+    project.ext.hidapi_ane = project.ext.root + "/hidapi/hidapi_ane"
+    project.ext.hidapi_as3 = project.ext.hidapi_ane + "/src"
+    project.ext.hidapi_native = project.ext.root + "/hidapi/hidapi_native"
+    project.ext.hidapi_bin = project.ext.hidapi_native + "/bin"
+
+    project.ext.doc_zip = "${hidapi}.zip"
+    project.ext.ane = "${hidapi}.ane"
+    project.ext.swc = "${hidapi}.swc"
+    project.ext.swf = "${application_name}.swf"
+    project.ext.mxml = "${application_name}.mxml"
+
+    project.ext.keystore = project.ext.root + "/" + keystore
+
+
+    //tools
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        project.ext.platform = "Windows-x86"
+        project.ext.make = "mingw32-make"
+        project.ext.amxmlc = AIR_SDK_HOME + "/bin/amxmlc.bat"
+        project.ext.acompc = AIR_SDK_HOME + "/bin/acompc.bat"
+        project.ext.adt = AIR_SDK_HOME + "/bin/adt.bat"
+        project.ext.aasdoc = AIR_SDK_HOME + "/bin/aasdoc.bat"
+
+        project.ext.makefile = "makefile.win"
+        project.ext.native = "${hidapi}.dll"
+        project.ext.descriptor = project.ext.hidapi_ane + "/extwin/extension.xml"
+
+        project.ext.target = "native"
+        project.ext.installer = "${application_name}.exe"
+    }
+    else if (Os.isFamily(Os.DARWIN)) {
+        project.ext.platform = "MacOS-x86"
+        project.ext.make = "make"
+        project.ext.amxmlc = AIR_SDK_HOME + "/bin/amxmlc"
+        project.ext.acompc = AIR_SDK_HOME + "/bin/acompc"
+        project.ext.adt = AIR_SDK_HOME + "/bin/adt"
+        project.ext.aasdoc = AIR_SDK_HOME + "/bin/aasdoc"
+
+        project.ext.makefile = "makefile.mac"
+        project.ext.native = "${hidapi}.framework"
+        project.ext.descriptor = project.ext.hidapi_ane + "/extmac/extension.xml"
+
+        project.ext.target = "native"
+        project.ext.installer = "${application_name}.dmg"
+    }
+    else {
+        assert false: 'Your operating system is not supported'
+    }
+
+
+    //android switch
+    if (System.properties['android'] != null)
+    {
+        project.ext.platform = "Android-ARM"
+        project.ext.makefile = "makefile.android"
+        project.ext.native = "${hidapi}.jar"
+        project.ext.descriptor = project.ext.hidapi_ane + "/extand/extension.xml"
+
+        project.ext.target = "apk"
+        project.ext.installer = "${application_name}.apk"
+
+        project.ext.mobile = true
+    }
+    else {
+        project.ext.mobile = false
+    }
+
+    project.ext.desktop = !project.ext.mobile
+
+    println "Configured   : ${project.name} - '${projectDir}'"
+}
+
+task clean {
+    description "Clean"
+    doFirst {
+        println "${description}"
+        ant.delete(dir: project.ext.release, failonerror: true)
+        ant.mkdir(dir: project.ext.release)
+        task(":hidapi:clean").execute()
+        task(":hidapi_demo:clean").execute()
+    }
+}
+
+task build {
+    dependsOn task(":hidapi:build"), task(":hidapi_demo:build")
+}
+
+defaultTasks "clean", "build"

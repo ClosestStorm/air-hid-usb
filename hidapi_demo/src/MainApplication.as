@@ -97,9 +97,13 @@ package
 
         private function getVersion():String
         {
-            var descriptor:XML = NativeApplication.nativeApplication.applicationDescriptor;
-            var ns:Namespace = descriptor.namespaceDeclarations()[0];
-            var version:String = descriptor.ns::versionNumber;
+            var version:String = "mobile";
+            CONFIG::desktop
+            {
+                var descriptor:XML = NativeApplication.nativeApplication.applicationDescriptor;
+                var ns:Namespace = descriptor.namespaceDeclarations()[0];
+                version = descriptor.ns::versionNumber;
+            }
             return version;
         }
 
