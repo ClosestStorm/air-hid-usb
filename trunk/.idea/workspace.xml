@@ -15,15 +15,14 @@
     <bookmark url="file://$PROJECT_DIR$/hidapi/hidapi_native/hidapi/air.cpp" line="743" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="ff23b285-43fd-4c58-a411-9c23c5440c5e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/build.gradle" afterPath="$PROJECT_DIR$/hidapi/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi_demo/build.gradle" afterPath="$PROJECT_DIR$/hidapi_demo/build.gradle" />
+    <list default="true" readonly="true" id="ff23b285-43fd-4c58-a411-9c23c5440c5e" name="Default" comment="android impl: gradle build">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.iml" afterPath="$PROJECT_DIR$/demo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="air-hid-usb.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373848342952" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373848560944" ignored="false" />
     <file path="$PROJECT_DIR$/../hidapi/hidapi/hidapi_native/android/gen/com/hidapi/BuildConfig.java" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373745551586" ignored="false" />
     <file path="$PROJECT_DIR$/../hidapi/hidapi/hidapi_native/android/gen/com/hidapi/Manifest.java" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373745553568" ignored="false" />
     <file path="$PROJECT_DIR$/../hidapi/hidapi/hidapi_native/android/gen/com/hidapi/R.java" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373745553568" ignored="false" />
@@ -40,7 +39,7 @@
     <file path="$PROJECT_DIR$/hidapi/hidapi_native/bin/extension.xml" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373830979893" ignored="false" />
     <file path="/air-manifest.xml" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373847412844" ignored="false" />
     <file path="$PROJECT_DIR$/../hidapi/build.xml" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373844323347" ignored="false" />
-    <file path="/fragment.js2" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373847639456" ignored="false" />
+    <file path="/fragment.js2" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373848652550" ignored="false" />
     <file path="/build.cmd" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373847660730" ignored="false" />
     <file path="/history.txt" changelist="ff23b285-43fd-4c58-a411-9c23c5440c5e" time="1373847804296" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -106,10 +105,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="54" selection-start="3795" selection-end="3795" vertical-scroll-proportion="-28.48">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="116" column="54" selection-start="3795" selection-end="3795" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,9 +133,7 @@
         <entry file="file://$PROJECT_DIR$/hidapi/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state line="7" column="17" selection-start="190" selection-end="210" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -166,7 +161,7 @@
       <file leaf-file-name="DemoHID.mxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hidapi_demo/src/DemoHID.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -201,17 +196,58 @@
     <option name="availableTasks">
       <set>
         <GradleTaskDescriptor>
-          <option name="name" value="ane" />
+          <option name="name" value=":hidapi:build" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="name" value="nat" />
+          <option name="name" value=":hidapi_demo:build" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Build Application" />
+          <option name="name" value="build" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Clean Extension" />
+          <option name="name" value="clean" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Clean Native" />
+          <option name="name" value="clean_native" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Package Extension" />
+          <option name="name" value="create_ane" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Package Application Mobile" />
+          <option name="name" value="create_apk" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Build Documentation" />
+          <option name="name" value="create_asdoc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Package Application Desktop" />
+          <option name="name" value="create_installer" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Build Native" />
+          <option name="name" value="create_native" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compile ActionScript" />
+          <option name="name" value="create_swc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compile ActionScript" />
+          <option name="name" value="create_swf" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Clean" />
+          <option name="name" value="release" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="description" value="Initializes a new Gradle build. [incubating]" />
           <option name="name" value="setupBuild" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="swc" />
         </GradleTaskDescriptor>
       </set>
     </option>
@@ -320,32 +356,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi_demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hidapi2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="hidapi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -360,17 +372,27 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="268" />
-    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="262" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="35" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="271" />
-    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -380,36 +402,36 @@
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="254" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hidapi_demo/lib/hidapi.swc!/" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="260" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="555" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="260" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="258" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="274" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="fud_pw_h" value="1040" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="721" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="274" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="721" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.project.gradle" />
     <property name="fud_pw_w" value="1920" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="options.lastSelected" value="reference.settingsdialog.project.gradle" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
     <property name="fud_pw_y" value="0" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="fud_pw_x" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -760,7 +782,11 @@
       <created>1373847813100</created>
       <updated>1373847813100</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="android impl: gradle build">
+      <created>1373848355100</created>
+      <updated>1373848355100</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -785,7 +811,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -808,7 +834,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14621131" sideWeight="0.5939933" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14621131" sideWeight="0.5939933" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40600666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="jenkinsBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Kahlua" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -906,25 +932,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="52" selection-end="52" vertical-scroll-proportion="0.038946163">
+        <state line="9" column="16" selection-start="137" selection-end="153" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="25" selection-start="52" selection-end="52" vertical-scroll-proportion="0.038946163" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../Tools/gradle/lib/groovy-all-1.8.6.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1737" column="26" selection-start="104312" selection-end="104312" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="1737" column="26" selection-start="104312" selection-end="104312" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/hidapi_native/android/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="496" selection-end="496" vertical-scroll-proportion="0.48080808">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="496" selection-end="496" vertical-scroll-proportion="0.48080808" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gradle.properties">
@@ -943,30 +970,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hidapi_demo/src/BaseApplication.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="112" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="23" column="112" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../SDKs/air3.5_4.9/frameworks/libs/air/airglobal.swc!/library.swf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7749" column="29" selection-start="336802" selection-end="336802" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7749" column="29" selection-start="336802" selection-end="336802" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hidapi_demo/src/MainApplication.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="91" selection-start="3288" selection-end="3288" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#157#186#0" expanded="true" />
-            <element signature="e#831#870#0" expanded="true" />
-            <element signature="e#918#944#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="108" column="91" selection-start="3288" selection-end="3288" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hidapi_demo/air-manifest.xml">
@@ -997,21 +1011,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="54" selection-start="3795" selection-end="3795" vertical-scroll-proportion="-28.48">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hidapi/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="17" selection-start="190" selection-end="210" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="54" selection-start="3795" selection-end="3795" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1088,12 +1098,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>demo</last-edited>
+          <last-edited>demo|demo</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
