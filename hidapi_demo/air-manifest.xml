@@ -4,7 +4,7 @@
   ~
   ~ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
   -->
-<application xmlns="http://ns.adobe.com/air/application/3.1">
+<application xmlns="http://ns.adobe.com/air/application/3.5">
 	<!-- Adobe AIR Application Descriptor File Template.
         Specifies parameters for identifying, installing, and launching AIR applications.
         See http://www.adobe.com/go/air_1.0_application_descriptor for complete documentation.
@@ -56,11 +56,11 @@
 		<!--<y>0</y>-->
 		<!-- The window's minimum size, specified as a width/height pair, such as "400 200". Optional. -->
 		<!--<minSize>500 500</minSize>-->
-		<visible>false</visible>
+		<!--<visible>false</visible>-->
+        <aspectRatio>any</aspectRatio>
 		<!-- The window's initial maximum size, specified as a width/height pair, such as "1600 1200". Optional. -->
 		<!--<maxSize>500 500</maxSize>-->
 		<renderMode>cpu</renderMode>
-		<aspectRatio>portrait</aspectRatio>
 		<fullScreen>true</fullScreen>
 		<autoOrients>false</autoOrients>
 	</initialWindow>

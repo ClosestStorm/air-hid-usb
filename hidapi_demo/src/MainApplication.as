@@ -15,6 +15,7 @@ package
 
     import mx.collections.ArrayCollection;
     import mx.controls.Spacer;
+    import mx.core.FlexGlobals;
     import mx.graphics.SolidColorStroke;
 
     import renderer.DeviceRenderer;
@@ -64,6 +65,8 @@ package
 
         private var timer:uint;
 
+        private var manager:IHIDManager;
+
         public function MainApplication()
         {
             var verticalLayout:VerticalLayout = new VerticalLayout();
@@ -78,7 +81,8 @@ package
 
             Log.addTarget(new ConsoleTarget());
             Log.addTarget(new TextTarget(txtLogOutput));
-            
+
+
             addEventListener(FlexEvent.INITIALIZE, initializeApplication, false, 0, true);
             addEventListener(Event.CLOSE, closeApplication, false, 0, true);
         }
@@ -121,13 +125,14 @@ package
 
             var header:HGroup = new HGroup();
             header.percentWidth = 100;
-            header.height = 25;
+            header.height = 50;
             header.horizontalAlign = "left";
             header.verticalAlign = "middle";
 
 
             btnSwitch = new Button();
             btnSwitch.label = SHOW_LOGS;
+            btnSwitch.height = 50;
             btnSwitch.addEventListener(MouseEvent.CLICK, onSwitchClick, false, 0, true);
             header.addElement(btnSwitch);
 
@@ -200,6 +205,8 @@ package
 
         private function startDeviceDetection():void
         {
+            manager = HIDFactory.getHIDManager();
+
             updateStatus();
 
             timer = setInterval(updateStatus, 5000);
@@ -207,9 +214,16 @@ package
 
         private function updateStatus():void
         {
-            var manager:IHIDManager = HIDFactory.getHIDManager();
-            var deviceList:Array = manager.getDeviceList();
-            dgrDevices.dataProvider = new ArrayCollection(deviceList);
+            try
+            {
+                var deviceList:Array = manager.getDeviceList();
+                dgrDevices.dataProvider = new ArrayCollection(deviceList);
+                log.info("devices found: {0}", deviceList.length);
+            }
+            catch(e:Error)
+            {
+                log.error(e.message);
+            }
         }
     }
 }
