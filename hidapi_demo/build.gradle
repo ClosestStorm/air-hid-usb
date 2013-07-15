@@ -5,7 +5,7 @@
  */
 
 task create_swf(type:Exec) {
-    description "Build ActionScript"
+    description "Compile ActionScript"
     doFirst {
         println "${description}"
     }
@@ -13,9 +13,9 @@ task create_swf(type:Exec) {
 }
 
 task create_installer(type: Exec) {
-    description "Package Application"
+    description "Package Application Desktop"
     workingDir project.ext.application
-    commandLine project.ext.adt, "-package", "-XnoAneValidate", "-storetype", "pkcs12", "-storepass", storepass, "-keystore", project.ext.keystore, "-target", project.ext.target, "${project.ext.root}/${project.ext.installer}", manifest, project.ext.swf, "-C", project.ext.application_as3, "${project.ext.application_as3}/style/app", "-extdir", project.ext.extensions
+    commandLine project.ext.adt, "-package", "-XnoAneValidate", "-storetype", "pkcs12", "-storepass", storepass, "-keystore", project.ext.keystore, "-target", project.ext.target, "${project.ext.release}/${project.ext.installer}", manifest, project.ext.swf, "-C", project.ext.application_as3, "${project.ext.application_as3}/style/app", "-extdir", project.ext.extensions
     doFirst {
         println "${description}"
         ant.copy (file: project.ext.descriptor, todir: project.ext.hidapi_bin, overwrite: true, failonerror: true)
@@ -26,9 +26,9 @@ task create_installer(type: Exec) {
 }
 
 task create_apk(type: Exec) {
-    description "Package Application"
+    description "Package Application Mobile"
     workingDir project.ext.application
-    commandLine project.ext.adt, "-package", "-target", project.ext.target, "-storetype", "pkcs12", "-storepass", storepass, "-keystore", project.ext.keystore, "${project.ext.root}/${project.ext.installer}", manifest, project.ext.swf, "-C", project.ext.application_as3, "${project.ext.application_as3}/style/app", "-extdir", project.ext.extensions
+    commandLine project.ext.adt, "-package", "-target", project.ext.target, "-storetype", "pkcs12", "-storepass", storepass, "-keystore", project.ext.keystore, "${project.ext.release}/${project.ext.installer}", manifest, project.ext.swf, "-C", project.ext.application_as3, "${project.ext.application_as3}/style/app", "-extdir", project.ext.extensions
     doFirst {
         println "${description}"
         ant.copy (file: project.ext.descriptor, todir: project.ext.hidapi_bin, overwrite: true, failonerror: true)
@@ -39,7 +39,16 @@ task create_apk(type: Exec) {
 }
 
 task clean {
-    description "Clean application"
+    description "Clean Application"
+    doFirst {
+        println "${description}"
+
+        ant.delete(file: "${project.ext.application}/${project.ext.swf}", failonerror:true)
+    }
+}
+
+task release {
+    description "Distribute Application"
     doFirst {
         println "${description}"
     }

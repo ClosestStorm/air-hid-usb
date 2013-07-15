@@ -92,6 +92,15 @@ allprojects {
     println "Configured   : ${project.name} - '${projectDir}'"
 }
 
+task release {
+    description "Clean"
+    doFirst {
+        println "${description}"
+        task(":hidapi:release").execute()
+        task(":hidapi_demo:release").execute()
+    }
+}
+
 task clean {
     description "Clean"
     doFirst {
@@ -107,4 +116,4 @@ task build {
     dependsOn task(":hidapi:build"), task(":hidapi_demo:build")
 }
 
-defaultTasks "clean", "build"
+defaultTasks "clean", "build", "release"

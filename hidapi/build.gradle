@@ -5,7 +5,7 @@
  */
 
 task create_swc(type: Exec) {
-    description "Build ActionScript"
+    description "Compile ActionScript"
     commandLine project.ext.acompc, "-locale", "en_US", "${incremental}", "-debug=${debug}", "-warnings=${warnings}", "-output", "${project.ext.libraries}/${project.ext.swc}", "-source-path+=${project.ext.hidapi_as3}", "-include-sources=${project.ext.hidapi_as3}"
 
     doFirst {
@@ -64,6 +64,15 @@ task create_asdoc(type: Exec) {
                 include(name: '**')
             }
         }
+    }
+}
+
+task release {
+    description "Distribute Extension"
+    doFirst {
+        println "${description}"
+        ant.copy (file: "${project.ext.hidapi_bin}/${project.ext.doc_zip}", todir: project.ext.release, overwrite: true, failonerror: true)
+        ant.copy (file: "${project.ext.hidapi_bin}/${project.ext.ane}", todir: project.ext.release, overwrite: true, failonerror: true)
     }
 }
 
