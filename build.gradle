@@ -93,7 +93,7 @@ allprojects {
 }
 
 task release {
-    description "Clean"
+    description "Distribute"
     doFirst {
         println "${description}"
         task(":hidapi:release").execute()
