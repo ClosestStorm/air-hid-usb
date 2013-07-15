@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="FlexBuildConfigurationManager" active="Unnamed">
+  <component name="FlexBuildConfigurationManager" active="DemoHID">
     <configurations>
-      <configuration>
-        <dependencies />
+      <configuration name="DemoHID" target-platform="Desktop" main-class="DemoHID" output-file="DemoHID.swf" output-folder="$MODULE_DIR$/../release" skip-build="true">
+        <dependencies>
+          <sdk name="4.6.0" />
+        </dependencies>
         <compiler-options />
-        <packaging-air-desktop />
+        <packaging-air-desktop package-file-name="Unnamed" />
         <packaging-android />
         <packaging-ios />
       </configuration>
@@ -14,12 +16,14 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$">
+    <content url="file://$MODULE_DIR$/..">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../hidapi/doc" />
+      <excludeFolder url="file://$MODULE_DIR$/../hidapi/hidapi_native/bin" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="4.6.0" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="hidapi_ane" />
   </component>
 </module>
 
