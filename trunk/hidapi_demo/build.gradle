@@ -1,0 +1,62 @@
+/*
+ * Copyright: (c) 2013. Turtsevich Alexander
+ *
+ * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.html
+ */
+
+task create_swf(type:Exec) {
+    description "Build ActionScript"
+    doFirst {
+        println "${description}"
+    }
+    commandLine project.ext.amxmlc, "-locale", "en_US", "${incremental}", "-debug=${debug}", "-warnings=${warnings}", "-library-path+=${project.ext.libraries}", "-headless-server=true", "-external-library-path+=${project.ext.libraries}/${project.ext.swc}", "-mobile=${project.ext.mobile}", "-define=CONFIG::desktop,${project.ext.desktop}", "-define=CONFIG::mobile,${project.ext.mobile}", "-output", "${project.ext.application}/${project.ext.swf}" , "--", "${project.ext.application_as3}/${project.ext.mxml}"
+}
+
+task create_installer(type: Exec) {
+    description "Package Application"
+    workingDir project.ext.application
+    commandLine project.ext.adt, "-package", "-XnoAneValidate", "-storetype", "pkcs12", "-storepass", storepass, "-keystore", project.ext.keystore, "-target", project.ext.target, "${project.ext.root}/${project.ext.installer}", manifest, project.ext.swf, "-C", project.ext.application_as3, "${project.ext.application_as3}/style/app", "-extdir", project.ext.extensions
+    doFirst {
+        println "${description}"
+        ant.copy (file: project.ext.descriptor, todir: project.ext.hidapi_bin, overwrite: true, failonerror: true)
+    }
+    doLast {
+        ant.copy (file: "${project.ext.hidapi_bin}/${project.ext.ane}", todir: project.ext.extensions, overwrite: true, failonerror: true)
+    }
+}
+
+task create_apk(type: Exec) {
+    description "Package Application"
+    workingDir project.ext.application
+    commandLine project.ext.adt, "-package", "-target", project.ext.target, "-storetype", "pkcs12", "-storepass", storepass, "-keystore", project.ext.keystore, "${project.ext.root}/${project.ext.installer}", manifest, project.ext.swf, "-C", project.ext.application_as3, "${project.ext.application_as3}/style/app", "-extdir", project.ext.extensions
+    doFirst {
+        println "${description}"
+        ant.copy (file: project.ext.descriptor, todir: project.ext.hidapi_bin, overwrite: true, failonerror: true)
+    }
+    doLast {
+        ant.copy (file: "${project.ext.hidapi_bin}/${project.ext.ane}", todir: project.ext.extensions, overwrite: true, failonerror: true)
+    }
+}
+
+task clean {
+    description "Clean application"
+    doFirst {
+        println "${description}"
+    }
+}
+
+task build {
+    description "Build Application"
+}
+
+build << {
+    println "${description}"
+    create_swf.execute()
+
+    if(project.ext.mobile) {
+        create_apk.execute()
+    }
+    else {
+        create_installer.execute()
+    }
+}
