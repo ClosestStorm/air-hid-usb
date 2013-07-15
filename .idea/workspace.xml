@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="c2a59959-fb56-4871-9c74-c2aaf6d6ac82" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/flexCompiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi/hidapi_ane/hidapi_ane.iml" afterPath="$PROJECT_DIR$/hidapi/hidapi_ane/hidapi_ane.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hidapi_demo/hidapi_demo.iml" afterPath="$PROJECT_DIR$/hidapi_demo/hidapi_demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="air-hid-usb.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c2a59959-fb56-4871-9c74-c2aaf6d6ac82" time="1373849264522" ignored="false" />
-    <file path="/fragment.js2" changelist="c2a59959-fb56-4871-9c74-c2aaf6d6ac82" time="1373849528048" ignored="false" />
+    <file path="/Dummy.txt" changelist="c2a59959-fb56-4871-9c74-c2aaf6d6ac82" time="1373849544299" ignored="false" />
+    <file path="/fragment.js2" changelist="c2a59959-fb56-4871-9c74-c2aaf6d6ac82" time="1373849577198" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +124,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="air-hid-usb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi2013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hidapi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -139,7 +150,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hidapi/hidapi_ane" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -329,7 +340,11 @@
       <created>1373849277100</created>
       <updated>1373849277100</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="new project">
+      <created>1373849554100</created>
+      <updated>1373849554100</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
